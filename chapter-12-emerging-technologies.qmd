@@ -1,73 +1,548 @@
 # Evaluating Emerging Technologies {#sec-emerging-technologies}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
 ## The Concept First
 
-Technology changes constantly. The valuable skill isn't knowing today's tools – it's **systematically evaluating new technologies** to make informed recommendations. This chapter teaches you how to assess any technology, not just current ones.
+In @sec-professional-practices, you learned practices that make developers effective. But the technology landscape changes constantly. The frameworks popular today may be legacy tomorrow. The "best practices" of five years ago may now be anti-patterns.
 
-## Understanding Through Frameworks
+This creates a challenge: **how do you evaluate new technologies without getting swept up in hype?**
 
-Don't ask "Is X good?" Ask:
+The answer isn't to know every new tool—that's impossible. The answer is developing a **systematic evaluation framework** that works for any technology. This meta-skill outlasts any specific tool.
 
-- What problem does it solve?
-- What trade-offs does it make?
-- Who is using it successfully?
-- What's the total cost of adoption?
+Consider the difference:
+
+- **Chasing trends**: "Everyone's using X, we should too"
+- **Systematic evaluation**: "X solves problem Y with trade-offs Z. Given our context, is it appropriate?"
+
+The second approach serves you for your entire career, regardless of which technologies rise and fall.
+
+## Understanding Through Investment Thinking
+
+Adopting a technology is an investment decision. Like financial investments, technology investments have:
+
+- **Upfront costs**: Learning time, integration effort, migration pain
+- **Ongoing costs**: Maintenance, updates, ecosystem changes
+- **Expected returns**: Productivity gains, capability improvements, competitive advantages
+- **Risks**: Technology abandonment, breaking changes, hiring difficulties
+
+Smart investors don't just ask "Will this stock go up?" They ask "Given my goals, timeline, and risk tolerance, is this the right investment?"
+
+Smart technologists don't just ask "Is this technology good?" They ask "Given our problem, team, timeline, and constraints, is this technology appropriate?"
+
+::: {.callout-tip}
+## The Hype Cycle Awareness
+New technologies typically follow a pattern: initial hype, peak of inflated expectations, trough of disillusionment, and finally a plateau of productivity. Understanding where a technology sits on this curve helps calibrate your evaluation.
+:::
 
 ## Discovering Evaluation with Your AI Partner
 
-### Exploration 1: Evaluation Framework
+### Exploration 1: Building an Evaluation Framework
 
 ```
 Ask your AI:
-Create a framework for evaluating whether a business should adopt a new web technology
+Help me create a comprehensive framework for evaluating whether a
+business should adopt a new web technology. What categories of
+questions should I ask? Walk me through the thinking process.
 ```
 
-### Exploration 2: Hype vs Reality
+A good framework might include:
+
+**Problem Fit:**
+- What specific problem does this solve?
+- Do we actually have this problem?
+- How are we solving it currently?
+- How painful is the current solution?
+
+**Maturity and Stability:**
+- How long has this technology existed?
+- Who is using it in production?
+- How frequently do breaking changes occur?
+- What's the governance model (company, community, foundation)?
+
+**Ecosystem and Support:**
+- What's the documentation quality?
+- How active is the community?
+- Are there quality learning resources?
+- Can we hire people who know this?
+
+**Integration and Migration:**
+- How does this fit with our existing stack?
+- What's the migration path?
+- Can we adopt incrementally?
+- What's the rollback strategy?
+
+**Total Cost:**
+- What's the learning curve?
+- What are ongoing maintenance requirements?
+- Are there licensing costs?
+- What's the opportunity cost of adoption time?
+
+```
+Continue the conversation:
+Now apply this framework to evaluate whether a small business
+should adopt TypeScript for their JavaScript projects. Walk me
+through each category.
+```
+
+### Exploration 2: Distinguishing Hype from Value
 
 ```
 Ask your AI:
-How do you distinguish technology hype from genuine value? Give examples from web development history.
+How do you distinguish technology hype from genuine value? Give me
+examples from web development history—technologies that were hyped
+but didn't deliver, and technologies that seemed overhyped but
+proved genuinely valuable.
 ```
 
-### Exploration 3: Current Landscape
+This should reveal patterns:
+
+**Signs of hype without substance:**
+- Solves problems most projects don't have
+- Benefits are vague ("makes development better")
+- Requires rewriting everything to adopt
+- Community focuses on features, not outcomes
+
+**Signs of genuine value:**
+- Addresses real, common pain points
+- Benefits are concrete and measurable
+- Can be adopted incrementally
+- Users talk about problems solved, not features
+
+```
+Continue the conversation:
+What red flags should I watch for when evaluating a new JavaScript
+framework? What would make you cautious?
+```
+
+### Exploration 3: Current Technology Landscape
+
+Technologies change, but evaluation skills persist. Let's practice:
 
 ```
 Ask your AI:
-What web technologies are gaining adoption in 2025? For each, what problem does it solve?
+What web technologies are currently gaining significant adoption?
+For each, explain: (1) what problem it solves, (2) what trade-offs
+it makes, and (3) what type of project would benefit most from it.
 ```
+
+As of this book's writing, relevant technologies include:
+
+- **TypeScript**: Type safety for JavaScript
+- **Server-side rendering (SSR)**: Performance and SEO
+- **Edge computing**: Latency and global distribution
+- **Progressive Web Apps (PWAs)**: Native-like web experiences
+- **AI-assisted development**: Code generation and assistance
+
+```
+Continue the conversation:
+For a team of three developers building a customer portal for a
+medium-sized business, which of these technologies would you
+recommend evaluating seriously? Which would you suggest ignoring
+for now? Explain your reasoning.
+```
+
+### Exploration 4: Learning from History
+
+```
+Ask your AI:
+Tell me about technologies that were "must learn" five years ago
+but are now less relevant. What can we learn from this about
+evaluating current technologies?
+```
+
+This develops healthy scepticism. Technologies that seemed essential often:
+
+- Were replaced by simpler alternatives
+- Solved problems that platforms eventually solved
+- Had high adoption costs that weren't justified
+- Were driven by specific company interests
 
 ## From Concept to Code
 
-[To be developed: PWAs, TypeScript, SSR, evaluation case studies]
+Let's explore practical examples of emerging patterns.
+
+### TypeScript: Adding Types to JavaScript
+
+TypeScript adds static typing to JavaScript. The evaluation:
+
+**Problem it solves:**
+- Runtime errors from type mismatches
+- Difficulty understanding code at scale
+- Refactoring without confidence
+- Poor IDE support for large codebases
+
+**Trade-offs:**
+- Additional compilation step
+- Learning curve for type system
+- More verbose code
+- Build tooling complexity
+
+**Example comparison:**
+
+```javascript
+// JavaScript
+function calculateDiscount(price, percentage) {
+    return price * (percentage / 100);
+}
+
+// Works at runtime, but wrong results
+calculateDiscount("100", "10");  // "100" repeated 0.1 times = NaN-ish behavior
+calculateDiscount(100);          // NaN (percentage is undefined)
+```
+
+```typescript
+// TypeScript
+function calculateDiscount(price: number, percentage: number): number {
+    return price * (percentage / 100);
+}
+
+// Errors caught at compile time
+calculateDiscount("100", "10");  // Error: Argument of type 'string' is not assignable
+calculateDiscount(100);          // Error: Expected 2 arguments, but got 1
+```
+
+**When TypeScript makes sense:**
+- Teams larger than 2-3 people
+- Codebases expected to grow significantly
+- APIs consumed by multiple clients
+- Long-lived projects
+
+**When to skip TypeScript:**
+- Quick prototypes
+- Solo projects with short lifespans
+- Teams with no TypeScript experience and tight deadlines
+
+```
+Ask your AI:
+I'm starting a new React project. It's a dashboard for internal use
+by about 50 employees, built by me and one other developer, expected
+to be maintained for 3-5 years. Should we use TypeScript? Walk me
+through the decision.
+```
+
+### Progressive Web Apps (PWAs)
+
+PWAs use web technologies to deliver app-like experiences.
+
+**Problem they solve:**
+- App store friction for distribution
+- Need for offline functionality
+- Push notification capability
+- Installation on home screen
+
+**Trade-offs:**
+- More complex than standard websites
+- iOS support limitations
+- Not all native features available
+- User education about "installation"
+
+**Basic PWA structure:**
+
+```javascript
+// service-worker.js (simplified)
+const CACHE_NAME = 'my-app-v1';
+const ASSETS_TO_CACHE = [
+    '/',
+    '/index.html',
+    '/styles.css',
+    '/app.js'
+];
+
+// Cache assets on install
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(ASSETS_TO_CACHE))
+    );
+});
+
+// Serve from cache when offline
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => response || fetch(event.request))
+    );
+});
+```
+
+```json
+// manifest.json
+{
+    "name": "My Application",
+    "short_name": "MyApp",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
+```
+
+**When PWAs make sense:**
+- Content-focused apps needing offline access
+- Avoiding app store distribution
+- Cross-platform with single codebase
+- Re-engagement via notifications
+
+**When to use native/hybrid instead:**
+- Heavy device feature requirements
+- Performance-critical applications
+- App store presence is valuable
+- Complex offline data sync needs
+
+### Server Components and SSR
+
+Modern frameworks offer server-side rendering and server components.
+
+**Problem they solve:**
+- Slow initial page load (JavaScript bundle download)
+- Poor SEO for dynamic content
+- Layout shift after hydration
+- Server-client data duplication
+
+**Trade-offs:**
+- Server infrastructure required
+- More complex mental model
+- Debugging across client/server boundary
+- Caching complexity
+
+**Mental model:**
+
+```
+Traditional SPA:
+Browser → Request HTML → Get minimal HTML
+       → Download large JS bundle
+       → JS renders content
+       → User sees content (slow)
+
+SSR:
+Browser → Request HTML → Server renders full HTML
+       → User sees content immediately
+       → JS downloads and "hydrates"
+       → Interactivity ready
+```
+
+```
+Ask your AI:
+My React app loads slowly because it fetches data after the page
+loads, showing spinners everywhere. Would server-side rendering
+help? What would change in how I build the app?
+```
+
+### Evaluating AI-Assisted Development
+
+AI coding assistants are a current example of technology requiring evaluation.
+
+**Problem they solve:**
+- Boilerplate code writing
+- Remembering syntax and APIs
+- Exploring unfamiliar codebases
+- Documentation lookup
+
+**Trade-offs:**
+- Code quality varies
+- May perpetuate bad patterns
+- Over-reliance reduces learning
+- Security/privacy considerations
+
+**Evaluation questions:**
+- Does AI assistance improve code quality or just speed?
+- Are developers learning or just accepting suggestions?
+- What happens when AI is unavailable?
+- How do we review AI-generated code?
+
+```
+Ask your AI:
+As an AI, what limitations should I be aware of when using AI
+coding assistants? When should I trust AI suggestions versus
+being sceptical?
+```
+
+## Building Your Mental Model
+
+### The Technology Adoption Curve
+
+```
+                           Peak of
+                           Inflated
+                           Expectations
+                               │
+Visibility                     │
+    │                        ╱ │ ╲
+    │                      ╱   │   ╲
+    │       Innovation   ╱     │     ╲    Trough of
+    │       Trigger    ╱       │       ╲  Disillusionment
+    │         │      ╱         │         ╲___
+    │         │    ╱           │             ╲___    Plateau of
+    │         ▼  ╱             │                 ╲___Productivity
+    │         ╱                │                     ▔▔▔▔
+    └─────────────────────────────────────────────────────────►
+                            Time
+```
+
+Technologies at different stages need different evaluation approaches:
+
+- **Innovation trigger**: High risk, high uncertainty, evaluate carefully
+- **Peak of expectations**: Hype is highest, scepticism warranted
+- **Trough of disillusionment**: Early adopters struggling, realistic assessments emerge
+- **Plateau of productivity**: Proven technology, lower risk, realistic expectations
+
+### The Adoption Decision Matrix
+
+| Project Characteristics | Technology Risk Tolerance |
+|------------------------|---------------------------|
+| Short-lived, experimental | Higher (can pivot easily) |
+| Long-lived, critical | Lower (need stability) |
+| Small team, familiar stack | Lower (context switching cost) |
+| Growing team, scaling | Higher (need better tools) |
+| Tight deadline | Lower (no time to learn) |
+| Greenfield project | Higher (no migration cost) |
+
+### Questions That Reveal Reality
+
+When evaluating technology, these questions cut through marketing:
+
+1. **"What will we stop doing?"** - Adoption always has costs
+2. **"Who has used this for 2+ years?"** - Early success doesn't mean long-term success
+3. **"What's the worst-case migration?"** - If it fails, what's the recovery?
+4. **"Who maintains this?"** - Single company? Open community? Foundation?
+5. **"What problems does the community complain about?"** - Reveals real issues
 
 ## Business Applications
 
-*This develops ULO 5 – assessing emerging technologies through systematic evaluation.*
+### Strategic Technology Planning
 
-- **Strategic planning**: Informed technology roadmaps
-- **Risk management**: Understanding adoption risks
-- **Client advisory**: Recommending appropriate solutions
-- **Career development**: Knowing what to learn next
+Technology evaluation skills enable business strategy:
+
+- **Roadmap development**: When to adopt which technologies
+- **Risk assessment**: Understanding adoption risks
+- **Competitive analysis**: What technologies enable competitors
+- **Talent planning**: What skills will be needed
+
+### Client Advisory
+
+Clients often ask about new technologies. Professional response:
+
+**Poor**: "Yes, blockchain is great, we should use it."
+
+**Better**: "Let me understand your problem first. Blockchain solves specific problems—immutable record-keeping, decentralised consensus. Do you have those problems? If not, simpler solutions exist."
+
+### Career Development
+
+Evaluation skills help you:
+
+- **Prioritise learning**: Focus on technologies with staying power
+- **Avoid burnout**: Stop chasing every new framework
+- **Build expertise**: Go deep on well-chosen technologies
+- **Stay relevant**: Recognise genuine shifts versus fads
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 5** (assessing emerging technologies through systematic evaluation). The ability to evaluate technologies objectively—separate from hype and personal preference—is essential for advising businesses on technology decisions.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 12.1: Framework Application (Level 1)
+
+Apply the evaluation framework to a technology of your choice:
+
+1. Choose a web technology you've heard about but haven't used
+2. Research it using the framework categories (problem fit, maturity, ecosystem, integration, cost)
+3. Document your findings for each category
+4. Write a one-paragraph recommendation
+
+### Exercise 12.2: Historical Analysis (Level 2)
+
+Research a technology that was popular 5 years ago but is less used now:
+
+1. What problem did it solve?
+2. Why did adoption decline?
+3. What replaced it?
+4. What could evaluators have noticed earlier?
+
+Write 300 words on lessons learned.
+
+### Exercise 12.3: Comparative Evaluation (Level 3)
+
+You need to choose between two competing technologies (e.g., two CSS frameworks, two state management libraries, two build tools):
+
+1. Define your evaluation criteria
+2. Research both technologies
+3. Score each against your criteria
+4. Make a recommendation with clear reasoning
+5. Note what would change your recommendation
+
+### Exercise 12.4: Context-Dependent Recommendation (Level 4)
+
+A client asks whether they should adopt a specific new technology. Create three different recommendations based on three different client contexts:
+
+1. Early-stage startup with 2 developers, moving fast
+2. Established company with 20 developers, maintaining legacy systems
+3. Enterprise with strict compliance requirements
+
+For each, explain how context changes the recommendation.
+
+### Exercise 12.5: Technology Radar (Level 5)
+
+Create your own "Technology Radar" for web development:
+
+1. Research 8-12 current web technologies
+2. Categorise each as: Adopt, Trial, Assess, or Hold
+3. For each, write 100-150 words justifying the categorisation
+4. Note your assumptions and biases
+5. Identify what new information would change your categorisations
+
+This mirrors how technology advisory firms like ThoughtWorks communicate recommendations.
 
 ## Chapter Summary
 
 - Evaluation frameworks outlast specific technologies
-- Trade-offs matter more than features
-- Adoption context determines suitability
-- Uncertainty is normal – acknowledge it
+- Technology adoption is an investment decision with costs and risks
+- Context determines whether a technology is appropriate
+- The hype cycle helps calibrate expectations
+- Questions that reveal trade-offs are more valuable than feature lists
+- Professional technologists advise based on client needs, not personal preferences
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 13, ensure you can:
+
+- [ ] Apply a systematic evaluation framework to any technology
+- [ ] Identify signs of hype versus genuine value
+- [ ] Explain how context affects technology recommendations
+- [ ] Describe the hype cycle and its implications
+- [ ] Ask questions that reveal technology trade-offs
+- [ ] Make recommendations appropriate to specific business contexts
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Personal Bias Awareness**: What technologies are you biased toward or against? How might this affect your evaluations?
+
+2. **Hype Recognition**: Think of a technology you were excited about that didn't deliver. What signs did you miss?
+
+3. **AI Conversation Reflection**: What technology did you evaluate with AI help? What did you learn about the evaluation process?
+
+4. **Future Prediction**: What technology do you think will be much more or less important in 5 years? What's your reasoning?
 
 ## Next Steps
 
-In Chapter 13, we'll focus on your development career – building a portfolio, positioning yourself professionally, and planning continuous growth.
+You now have tools to evaluate any technology that emerges. But technology skills alone don't build a career.
+
+In @sec-development-career, we'll focus on your professional development—building a portfolio, positioning yourself in the market, networking effectively, and planning continuous growth. Technical skill opens doors; professional skill keeps them open.
