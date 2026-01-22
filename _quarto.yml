@@ -16,6 +16,7 @@ book:
 
   chapters:
     - index.qmd
+    - reading-list.qmd
     - acknowledgments.qmd
 
     - part: "Part 0: Your AI Development Partnership"

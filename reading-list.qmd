@@ -1,0 +1,412 @@
+# Weekly Reading List {.unnumbered}
+
+This reading list accompanies the 12-week course structure, combining chapters from this book, methodology from *Intentional Prompting*, and curated external resources.
+
+## How to Use This List
+
+Each week includes:
+
+- **Book Chapter**: Primary reading from this book
+- **Methodology**: Relevant chapter from *Intentional Prompting*
+- **Essential Reading**: Must-read external resources
+- **Deeper Dive**: Optional additional resources for those wanting more
+
+::: {.callout-tip}
+## Reading Strategy
+Read the book chapter first to understand concepts, then explore external resources for different perspectives and official documentation.
+:::
+
+---
+
+## Week 1: Foundations & AI Partnership
+
+### Focus
+Setting up your development environment and establishing your AI partnership approach.
+
+### Book Chapters
+- **Chapter 0**: Understanding Your AI Web Development Partner
+
+### Intentional Prompting
+- **Chapter 1**: Introduction
+- **Chapter 3**: Intentional Prompting Principles
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| MDN | Getting started with the web | [MDN: Getting Started](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) |
+| web.dev | How the web works | [web.dev: How the web works](https://web.dev/articles/howbrowserswork) |
+| W3Schools | Introduction to HTML | [W3Schools: HTML Introduction](https://www.w3schools.com/html/html_intro.asp) |
+
+### Deeper Dive
+- [History of the Web](https://www.w3.org/History.html) - W3C
+- [How browsers work](https://developer.chrome.com/blog/inside-browser-part1) - Google Chrome Blog
+
+---
+
+## Week 2: HTML Structure
+
+### Focus
+Semantic HTML and document structure as information architecture.
+
+### Book Chapters
+- **Chapter 1**: Structure: HTML as Information Architecture
+
+### Intentional Prompting
+- **Chapter 4**: The Six-Step Methodology (overview)
+- **Chapter 5**: Restate and Identify
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| MDN | HTML basics | [MDN: HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) |
+| MDN | Document structure | [MDN: Document Structure](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure) |
+| web.dev | Semantic HTML | [web.dev: Semantic HTML](https://web.dev/learn/html/semantic-html) |
+| W3Schools | HTML Elements | [W3Schools: HTML Elements](https://www.w3schools.com/html/html_elements.asp) |
+
+### Deeper Dive
+- [HTML Living Standard](https://html.spec.whatwg.org/) - WHATWG (reference)
+- [HTML Best Practices](https://github.com/hail2u/html-best-practices) - Community guide
+
+---
+
+## Week 3: CSS Presentation
+
+### Focus
+Visual design, responsive layouts, and mobile-first development.
+
+### Book Chapters
+- **Chapter 2**: Presentation: CSS as Visual Communication
+
+### Intentional Prompting
+- **Chapter 6**: Work by Hand
+- **Chapter 7**: Pseudocode
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| MDN | CSS basics | [MDN: CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) |
+| MDN | CSS layout | [MDN: CSS Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) |
+| web.dev | Learn CSS | [web.dev: Learn CSS](https://web.dev/learn/css) |
+| web.dev | Responsive design | [web.dev: Responsive Design](https://web.dev/articles/responsive-web-design-basics) |
+| W3Schools | CSS Introduction | [W3Schools: CSS](https://www.w3schools.com/css/css_intro.asp) |
+
+### Deeper Dive
+- [CSS Tricks: A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Every Layout](https://every-layout.dev/) - Layout patterns
+
+---
+
+## Week 4: JavaScript Behaviour
+
+### Focus
+Adding interactivity, DOM manipulation, and event handling.
+
+### Book Chapters
+- **Chapter 3**: Behaviour: JavaScript as User Interaction
+
+### Intentional Prompting
+- **Chapter 8**: Convert to Code
+- **Chapter 11**: Debugging with AI
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| MDN | JavaScript basics | [MDN: JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) |
+| MDN | DOM Introduction | [MDN: DOM Introduction](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) |
+| MDN | Events | [MDN: Introduction to Events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) |
+| javascript.info | The Modern JavaScript Tutorial | [javascript.info](https://javascript.info/) |
+| W3Schools | JavaScript Tutorial | [W3Schools: JavaScript](https://www.w3schools.com/js/) |
+
+### Deeper Dive
+- [Eloquent JavaScript](https://eloquentjavascript.net/) - Free online book
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) - Deep dive series
+
+---
+
+## Week 5: APIs & Data
+
+### Focus
+Connecting to external services, fetching data, and working with JSON.
+
+### Book Chapters
+- **Chapter 4**: Connection: APIs as Business Integration
+
+### Intentional Prompting
+- **Chapter 9**: Test with Data
+- **Chapter 10**: Intentional Prompting Patterns
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| MDN | Fetching data | [MDN: Fetching Data](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) |
+| MDN | Working with JSON | [MDN: Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) |
+| MDN | Async JavaScript | [MDN: Asynchronous JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous) |
+| web.dev | Introduction to fetch | [web.dev: Fetch API](https://web.dev/articles/introduction-to-fetch) |
+
+### Deeper Dive
+- [REST API Tutorial](https://restfulapi.net/) - REST concepts
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - Practice API
+- [Public APIs List](https://github.com/public-apis/public-apis) - APIs to explore
+
+---
+
+## Week 6: Portfolio Project & Accessibility
+
+### Focus
+Completing Assessment 1, accessibility fundamentals, and project review.
+
+### Book Chapters
+- **Project**: Portfolio Website
+- Review Chapters 1-4
+
+### Intentional Prompting
+- **Chapter 12**: Refactoring Strategies
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| web.dev | Learn Accessibility | [web.dev: Learn Accessibility](https://web.dev/learn/accessibility) |
+| MDN | Accessibility | [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility) |
+| W3C | WCAG Quick Reference | [WCAG 2.1 Quick Ref](https://www.w3.org/WAI/WCAG21/quickref/) |
+| WebAIM | Introduction to Accessibility | [WebAIM: Introduction](https://webaim.org/intro/) |
+
+### Deeper Dive
+- [A11y Project Checklist](https://www.a11yproject.com/checklist/)
+- [Inclusive Components](https://inclusive-components.design/) - Accessible patterns
+
+---
+
+## Week 7: Content Management Systems
+
+### Focus
+Understanding CMS value proposition and WordPress as a platform.
+
+### Book Chapters
+- **Chapter 5**: Why CMS? The Business Value of Managed Content
+- **Chapter 6**: WordPress as Platform
+
+### Intentional Prompting
+- **Chapter 13**: Case Studies (approach to complex projects)
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| WordPress.org | Getting Started | [WordPress: Getting Started](https://wordpress.org/documentation/article/get-started-with-wordpress/) |
+| WordPress.org | WordPress Features | [WordPress: Features](https://wordpress.org/about/features/) |
+| W3Techs | CMS Usage Statistics | [W3Techs: CMS](https://w3techs.com/technologies/overview/content_management) |
+| WPBeginner | WordPress Guide | [WPBeginner: Guide](https://www.wpbeginner.com/guides/) |
+
+### Deeper Dive
+- [WordPress Developer Resources](https://developer.wordpress.org/)
+- [WordPress TV](https://wordpress.tv/) - Video tutorials
+
+---
+
+## Week 8: Extending WordPress
+
+### Focus
+Plugins, themes, and customisation strategies.
+
+### Book Chapters
+- **Chapter 7**: Extending Platforms
+
+### Intentional Prompting
+- **Chapter 14**: Scaling Complexity
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| WordPress.org | Theme Handbook | [Theme Handbook](https://developer.wordpress.org/themes/) |
+| WordPress.org | Plugin Handbook | [Plugin Handbook](https://developer.wordpress.org/plugins/) |
+| WordPress.org | Child Themes | [Child Themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/) |
+| WPBeginner | Must Have Plugins | [Essential Plugins](https://www.wpbeginner.com/showcase/24-must-have-wordpress-plugins-for-business-websites/) |
+
+### Deeper Dive
+- [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/)
+- [Theme Unit Test](https://codex.wordpress.org/Theme_Unit_Test)
+
+---
+
+## Week 9: Tuition-Free Week
+
+### Focus
+Self-directed learning and project catch-up.
+
+### Suggested Activities
+- Review previous chapters
+- Complete any outstanding exercises
+- Explore Intentional Prompting deeper
+- Experiment with WordPress customisation
+
+### Optional Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| Smashing Magazine | WordPress Articles | [Smashing: WordPress](https://www.smashingmagazine.com/category/wordpress/) |
+| CSS Tricks | Various | [CSS Tricks](https://css-tricks.com/) |
+| Dev.to | Web Development | [Dev.to](https://dev.to/) |
+
+---
+
+## Week 10: WordPress REST API
+
+### Focus
+Headless architecture and API-first thinking.
+
+### Book Chapters
+- **Chapter 8**: Headless Architecture
+
+### Intentional Prompting
+- Review **Chapter 8-9**: Convert to Code, Test with Data
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| WordPress.org | REST API Handbook | [REST API Handbook](https://developer.wordpress.org/rest-api/) |
+| WordPress.org | REST API Reference | [REST API Reference](https://developer.wordpress.org/rest-api/reference/) |
+| CSS Tricks | WP REST API | [CSS Tricks: WP REST](https://developer.css-tricks.com/wp-rest-api/) |
+
+### Deeper Dive
+- [Postman](https://www.postman.com/) - API testing tool
+- [WP REST API Demo](https://developer.wordpress.org/rest-api/using-the-rest-api/)
+
+---
+
+## Week 11: React Integration
+
+### Focus
+Component-based thinking and connecting React to WordPress.
+
+### Book Chapters
+- **Chapter 9**: Component Thinking: React
+
+### Intentional Prompting
+- **Chapter 12**: Refactoring Strategies (component extraction)
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| React.dev | Quick Start | [React: Quick Start](https://react.dev/learn) |
+| React.dev | Thinking in React | [Thinking in React](https://react.dev/learn/thinking-in-react) |
+| React.dev | Tutorial | [React Tutorial](https://react.dev/learn/tutorial-tic-tac-toe) |
+| MDN | React Getting Started | [MDN: React](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) |
+
+### Deeper Dive
+- [React Patterns](https://reactpatterns.com/)
+- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
+
+---
+
+## Week 12: Frameworks & Professional Practice
+
+### Focus
+CSS frameworks, code quality, and professional development practices.
+
+### Book Chapters
+- **Chapter 10**: Rapid Development: CSS Frameworks
+- **Chapter 11**: Professional Practices
+
+### Intentional Prompting
+- **Chapter 15**: Teaching and Learning (reflection)
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| Bootstrap | Getting Started | [Bootstrap Docs](https://getbootstrap.com/docs/) |
+| Tailwind CSS | Getting Started | [Tailwind Docs](https://tailwindcss.com/docs) |
+| Git | Git Handbook | [GitHub: Git Handbook](https://guides.github.com/introduction/git-handbook/) |
+| web.dev | Testing | [web.dev: Testing](https://web.dev/learn/testing) |
+
+### Deeper Dive
+- [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
+- [Testing Library](https://testing-library.com/)
+
+---
+
+## Week 13: Future & Career
+
+### Focus
+Emerging technologies, portfolio building, and career positioning.
+
+### Book Chapters
+- **Chapter 12**: Evaluating Emerging Technologies
+- **Chapter 13**: Your Development Career
+- **Chapter 14**: The AI-Era Developer
+- **Project**: React Integration (final submission)
+
+### Intentional Prompting
+- **Chapter 16**: Future Directions
+
+### Essential Reading
+
+| Resource | Topic | Link |
+|----------|-------|------|
+| web.dev | Web Vitals | [web.dev: Web Vitals](https://web.dev/articles/vitals) |
+| web.dev | PWA | [web.dev: Learn PWA](https://web.dev/learn/pwa) |
+| State of JS | Survey Results | [State of JS](https://stateofjs.com/) |
+| State of CSS | Survey Results | [State of CSS](https://stateofcss.com/) |
+
+### Deeper Dive
+- [Roadmap.sh](https://roadmap.sh/) - Developer roadmaps
+- [The Pragmatic Engineer](https://blog.pragmaticengineer.com/) - Career insights
+- [Josh W Comeau's Blog](https://www.joshwcomeau.com/) - Modern CSS/React
+
+---
+
+## Quick Reference: External Resources
+
+### Official Documentation
+| Resource | Best For | URL |
+|----------|----------|-----|
+| **MDN Web Docs** | Comprehensive reference | [developer.mozilla.org](https://developer.mozilla.org/) |
+| **web.dev** | Modern best practices | [web.dev](https://web.dev/) |
+| **W3Schools** | Quick examples | [w3schools.com](https://www.w3schools.com/) |
+| **WordPress.org** | WordPress reference | [wordpress.org](https://wordpress.org/) |
+| **React.dev** | React documentation | [react.dev](https://react.dev/) |
+
+### Learning Platforms
+| Resource | Type | URL |
+|----------|------|-----|
+| **freeCodeCamp** | Interactive tutorials | [freecodecamp.org](https://www.freecodecamp.org/) |
+| **Codecademy** | Interactive courses | [codecademy.com](https://www.codecademy.com/) |
+| **Scrimba** | Video + coding | [scrimba.com](https://scrimba.com/) |
+| **Frontend Masters** | Video courses (paid) | [frontendmasters.com](https://frontendmasters.com/) |
+
+### Community & News
+| Resource | Type | URL |
+|----------|------|-----|
+| **Dev.to** | Articles & community | [dev.to](https://dev.to/) |
+| **CSS Tricks** | CSS & frontend | [css-tricks.com](https://css-tricks.com/) |
+| **Smashing Magazine** | Web design & dev | [smashingmagazine.com](https://www.smashingmagazine.com/) |
+| **Hacker News** | Tech news | [news.ycombinator.com](https://news.ycombinator.com/) |
+
+### Tools
+| Tool | Purpose | URL |
+|------|---------|-----|
+| **Can I Use** | Browser compatibility | [caniuse.com](https://caniuse.com/) |
+| **CodePen** | Code playground | [codepen.io](https://codepen.io/) |
+| **GitHub** | Code hosting | [github.com](https://github.com/) |
+| **Lighthouse** | Performance testing | Built into Chrome DevTools |
+
+---
+
+## Reading Tips
+
+1. **Don't read everything** - Focus on Essential Reading first
+2. **Hands-on over theory** - Try examples as you read
+3. **MDN is your friend** - Best for accurate, detailed explanations
+4. **web.dev for modern practices** - Google's recommendations
+5. **W3Schools for quick reference** - Fast examples, less depth
+6. **Use AI to explain** - If an article is confusing, ask AI to explain it differently
