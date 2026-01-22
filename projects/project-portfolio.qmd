@@ -1,57 +1,314 @@
 # Project: Portfolio Website {#sec-project-portfolio}
 
-::: {.callout-note}
-## Project Status: Stub
-This project needs full specification development.
-:::
-
 ## Project Overview
 
-Build a personal portfolio website demonstrating your mastery of HTML, CSS, JavaScript, and API integration.
+Your first substantial project brings together everything from Part I: Structure (HTML), Presentation (CSS), Behaviour (JavaScript), and Connection (APIs). You'll build a personal portfolio website—a professional asset that demonstrates your capabilities to future employers or clients.
+
+This isn't just an academic exercise. A well-crafted portfolio is one of the most valuable tools for launching a career in web development or digital business.
 
 **Aligned with**: Assessment 1 in ISYS3004
 
 ## Learning Outcomes Addressed
 
-- **ULO 1**: Design and implement effective web applications
-- **ULO 3**: Analyse requirements to inform design
-- **ULO 5**: Evaluate web technologies
+- **ULO 1**: Design, implement, and evaluate effective business web applications
+- **ULO 3**: Analyse stakeholder requirements to inform design decisions
+- **ULO 5**: Evaluate and apply appropriate web technologies
+
+## The Business Case
+
+Consider this project from a business perspective. Your portfolio serves multiple stakeholders:
+
+- **Potential employers** want to see what you can build and how you think
+- **Clients** want confidence that you understand professional standards
+- **You** need a platform to showcase growth over time
+
+Ask yourself: What does your portfolio need to communicate? Not just "I can code" but "I understand business needs, I write clean code, I think about users."
 
 ## Requirements
 
 ### Functional Requirements
 
-- Home page with introduction
-- About page with background
-- Projects/Work showcase
-- Contact information
-- Responsive design (mobile, tablet, desktop)
-- API integration (e.g., GitHub projects, weather widget)
+Your portfolio must include:
+
+1. **Home page**: Clear introduction establishing who you are and what you do
+2. **About section**: Your background, skills, and professional interests
+3. **Projects showcase**: At least three projects or work samples with descriptions
+4. **Contact information**: How someone can reach you professionally
+5. **Responsive design**: Works well on mobile, tablet, and desktop
+6. **API integration**: At least one meaningful use of external data
 
 ### Technical Requirements
 
-- Semantic HTML5
-- CSS with mobile-first approach
-- JavaScript for interactivity
-- API data fetching
-- Accessibility basics (WCAG 2.1 AA)
+| Requirement | Standard |
+|------------|----------|
+| HTML | Semantic HTML5 (appropriate use of `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, etc.) |
+| CSS | Mobile-first responsive design with Flexbox/Grid |
+| JavaScript | At least one interactive feature using event listeners |
+| API | At least one API call displaying external data |
+| Accessibility | Basic WCAG 2.1 AA compliance (semantic structure, alt text, colour contrast, keyboard navigation) |
+| Version control | Git repository with meaningful commit history |
+| Deployment | Live URL (GitHub Pages, Netlify, or similar) |
+
+### What Counts as API Integration?
+
+Choose one or more:
+
+- **GitHub API**: Display your repositories or contribution activity
+- **Weather API**: Show local weather (perhaps themed to where you're based)
+- **Quote API**: Display rotating inspirational or industry quotes
+- **JSON data file**: If external APIs are problematic, create your own JSON file of project data and fetch it
+- **Other**: Any public API that adds genuine value (not just demonstrating you can fetch data)
+
+The integration should be meaningful—it should serve a purpose for someone viewing your portfolio, not just prove you can make an API call.
+
+## Project Approach
+
+### Phase 1: Planning (Before Any Code)
+
+1. **Define your audience**: Who will view this portfolio? What do they need?
+2. **Content inventory**: List all the content you'll need (text, images, project descriptions)
+3. **Structure outline**: Sketch your page structure—what sections, what hierarchy?
+4. **Visual direction**: What atmosphere suits your professional identity?
+
+```
+Ask your AI:
+Help me plan a portfolio website structure. I want to showcase myself
+as [your professional focus]. What sections should I include, and
+what should each communicate to a potential employer?
+```
+
+### Phase 2: HTML Structure
+
+Build your complete HTML structure before styling:
+
+1. Create semantic markup for all pages/sections
+2. Validate your HTML (W3C Validator)
+3. Test that the content makes sense without any CSS
+4. Ensure heading hierarchy is logical (h1 → h2 → h3, no skipping)
+
+This phase should produce an "ugly but functional" page—all content present, properly structured, but unstyled.
+
+### Phase 3: CSS Styling
+
+Apply styles mobile-first:
+
+1. Base styles (typography, colours, spacing)
+2. Mobile layout (single column, readable)
+3. Tablet breakpoint (adjust layout as needed)
+4. Desktop breakpoint (multi-column where appropriate)
+5. Interactive states (hover, focus)
+
+```
+Ask your AI:
+Review this CSS for my portfolio. Am I following mobile-first
+principles? What could be simplified or improved?
+```
+
+### Phase 4: JavaScript Interactivity
+
+Add behaviour that enhances the experience:
+
+1. Navigation toggle for mobile
+2. Smooth scrolling to sections (optional)
+3. Form validation (if you have a contact form)
+4. Any other interactive features
+
+Remember progressive enhancement: your site should work without JavaScript.
+
+### Phase 5: API Integration
+
+Implement your API feature:
+
+1. Choose an appropriate API
+2. Handle loading states
+3. Handle errors gracefully
+4. Display data meaningfully
+
+### Phase 6: Testing and Refinement
+
+1. Test on multiple devices (or device emulators)
+2. Test with keyboard navigation only
+3. Run accessibility audit (Lighthouse, WAVE)
+4. Fix any issues found
+5. Get feedback from peers
 
 ## AI Collaboration Guidelines
 
-Document your AI collaboration:
+### How to Use AI Effectively
 
-1. What prompts helped most?
-2. What did you modify from AI suggestions?
-3. What did AI get wrong?
-4. What did you learn through the collaboration?
+This project is an opportunity to practice the collaboration skills from @sec-ai-web-partner. Use AI to:
+
+- Explore approaches before committing
+- Debug issues you can't resolve
+- Get feedback on code quality
+- Understand why something works, not just that it works
+
+**Do not** use AI to:
+
+- Generate your entire project and submit it
+- Write content about yourself (you know yourself better)
+- Skip understanding what the code does
+
+### Documentation Requirements
+
+Keep an AI collaboration log documenting:
+
+1. **Prompts that helped**: What questions got useful responses?
+2. **Modifications you made**: How did you adapt AI suggestions?
+3. **AI errors or limitations**: What did AI get wrong? How did you know?
+4. **Learning moments**: What did the collaboration teach you?
+
+This log demonstrates critical thinking—that you're directing the AI, not just copying its output.
+
+### Example Log Entry
+
+```
+Prompt: "Show me how to create a responsive navigation that collapses
+to a hamburger menu on mobile"
+
+AI Response: Provided HTML, CSS, and JavaScript for a toggle menu.
+
+What I Modified:
+- Changed class names to match my naming convention
+- Added ARIA attributes for accessibility (AI omitted these)
+- Simplified the CSS transitions
+
+What AI Got Wrong:
+- Used var instead of const/let
+- Didn't include focus states for keyboard users
+
+What I Learned:
+- The toggle pattern uses classList.toggle() which I hadn't used before
+- Need to remember accessibility attributes AI often forgets
+```
 
 ## Evaluation Criteria
 
-[To be developed: Rubric]
+### Structure and Semantics (20%)
 
-## Submission
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| HTML semantics | Excellent use of semantic elements; clear document outline | Good semantic structure with minor issues | Basic semantic elements present | Mostly `<div>` elements; poor semantics |
+| Heading hierarchy | Logical hierarchy throughout; single h1 | Mostly logical; minor inconsistencies | Headings present but some skipped levels | Headings used for styling, not structure |
+| Document validity | Valid HTML5; no errors | Minor validation warnings | Some validation errors | Multiple validation errors |
 
-- Live URL (GitHub Pages or similar)
-- Source code repository
-- AI collaboration log
-- Reflection document
+### Presentation and Responsiveness (25%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Mobile-first CSS | Clear mobile-first approach; logical breakpoints | Mostly mobile-first with some exceptions | Responsive but desktop-first | Not responsive or broken on devices |
+| Visual design | Professional appearance; clear hierarchy; consistent styling | Attractive design; minor inconsistencies | Functional design; some visual issues | Unprofessional or inconsistent styling |
+| Layout | Effective use of Flexbox/Grid; balanced whitespace | Good layouts; minor spacing issues | Basic layouts work | Layout breaks or looks cramped |
+
+### Interactivity and JavaScript (20%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| JavaScript functionality | Multiple interactive features working well | At least one feature working well | Basic interactivity present | JavaScript errors or non-functional |
+| Code quality | Clean, well-organised code; uses const/let | Mostly clean; minor issues | Functional but messy | Disorganised or copied without understanding |
+| Progressive enhancement | Site fully works without JS | Core content works without JS | Some functionality lost without JS | Site unusable without JS |
+
+### API Integration (15%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Implementation | API data displayed meaningfully; adds value | API working; reasonable use | API works but minimal value | API not working or missing |
+| Error handling | Loading states, error messages, graceful fallbacks | Loading and error states present | Some error handling | No error handling |
+
+### Accessibility and Best Practices (10%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Accessibility | Keyboard navigable; good contrast; alt text; ARIA where needed | Most accessibility basics met | Some accessibility consideration | Major accessibility barriers |
+| Performance | Fast loading; optimised images | Reasonable performance | Some performance issues | Slow or bloated |
+
+### AI Collaboration and Reflection (10%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Collaboration log | Detailed log showing critical engagement; modifications documented | Good documentation; shows thinking | Basic log with limited reflection | Missing or superficial log |
+| Reflection | Insightful reflection on process and learning | Good reflection on key learnings | Basic reflection | Missing or generic reflection |
+
+## Submission Checklist
+
+Before submitting, verify:
+
+**Technical**
+
+- [ ] Live URL works and all pages/sections accessible
+- [ ] Site works on mobile, tablet, and desktop
+- [ ] No JavaScript errors in console
+- [ ] API integration functioning
+- [ ] HTML validates (W3C Validator)
+- [ ] Git repository has meaningful commit history
+
+**Content**
+
+- [ ] All required sections present (Home, About, Projects, Contact)
+- [ ] Content is professional and represents you well
+- [ ] Images have alt text
+- [ ] No placeholder or lorem ipsum text
+
+**Documentation**
+
+- [ ] AI collaboration log complete
+- [ ] Reflection document (500-750 words) covering:
+  - Your development process
+  - Challenges encountered and how you solved them
+  - What you learned
+  - How AI collaboration helped (or didn't)
+  - What you would do differently
+
+## What to Submit
+
+1. **Live URL**: Where your portfolio can be viewed
+2. **Repository URL**: Your GitHub (or similar) repository
+3. **AI collaboration log**: Document (PDF or Markdown)
+4. **Reflection**: 500-750 word document
+
+## Getting Started
+
+Begin with these conversations with your AI partner:
+
+```
+Ask your AI:
+I'm planning a portfolio website to showcase my web development
+learning. Help me think through what sections I need and what each
+should communicate to someone considering hiring a junior developer.
+```
+
+```
+Ask your AI:
+What makes a portfolio stand out? Not visually flashy features, but
+professional qualities that employers actually notice. What should
+I prioritise?
+```
+
+```
+Ask your AI:
+I want to integrate an API into my portfolio. Help me evaluate
+options: GitHub API vs a weather API vs a quotes API. What would
+make each one add genuine value versus feel gimmicky?
+```
+
+Remember: This portfolio is yours. AI can help you build it, but your decisions, your content, and your professional identity should drive it. You're the architect.
+
+## Common Pitfalls to Avoid
+
+1. **Over-designing**: Simple and professional beats flashy and distracting
+2. **Under-writing**: "Check out my projects" tells employers nothing; explain what you did and learned
+3. **Ignoring mobile**: Test on actual devices, not just browser resize
+4. **Forgetting accessibility**: Keyboard navigation, colour contrast, alt text
+5. **Copying AI output blindly**: If you can't explain it, you shouldn't submit it
+6. **Leaving console errors**: Always check the browser console
+7. **Placeholder content**: "Lorem ipsum" signals incompleteness
+
+## After Submission
+
+Your portfolio is a living document. After this project:
+
+- Update it as you complete new work
+- Refine based on feedback
+- Keep the code clean and the content current
+
+The best portfolios evolve. This submission is the beginning, not the end.

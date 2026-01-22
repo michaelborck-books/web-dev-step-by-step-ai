@@ -1,67 +1,535 @@
 # Behaviour: JavaScript as User Interaction {#sec-behaviour}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-HTML provides structure. CSS provides presentation. JavaScript provides **behaviour** – the ability to respond to user actions, update content dynamically, and create interactive experiences.
+HTML provides structure. CSS provides presentation. JavaScript provides **behaviour**—the ability to respond to user actions, update content dynamically, and create interactive experiences.
+
+Consider a contact form. HTML creates the fields and the submit button. CSS makes it look professional. But what happens when someone clicks "Submit"? What validates their input? What shows them a success message? That's JavaScript.
+
+JavaScript transforms static documents into dynamic applications. It's what makes modern web experiences feel responsive and alive—dropdown menus that expand, forms that validate as you type, content that loads without page refreshes.
+
+But here's an important perspective: **JavaScript should enhance, not replace, structure and presentation**. A well-built page works without JavaScript. JavaScript makes it work *better*.
 
 ## Understanding Through Conversation
 
-A static page is like a poster. JavaScript makes your page more like a conversation – it listens, responds, and adapts.
+A static webpage is like a poster on a wall. You can look at it, but it can't respond to you. It just... sits there.
+
+JavaScript makes your page more like a conversation:
+
+- **It listens**: "The user clicked this button"
+- **It thinks**: "I should validate the form now"
+- **It responds**: "Show the error message next to the email field"
+- **It adapts**: "Now that they've fixed the email, remove the error"
+
+This back-and-forth is called **event-driven programming**. Instead of running top to bottom like a recipe, JavaScript waits for things to happen (events) and responds to them.
+
+::: {.callout-tip}
+## The Conversation Mindset
+When designing interactive features, think: "What might the user do?" (events) and "How should the page respond?" (handlers). Every interaction is a small conversation between user and page.
+:::
 
 ## Discovering Behaviour with Your AI Partner
 
 ### Exploration 1: Event-Driven Thinking
 
-```
-Ask your AI:
-Explain event-driven programming using a restaurant service analogy
-```
-
-### Exploration 2: DOM Manipulation
+The event-driven model is fundamental to understanding JavaScript. Let's explore it through analogy:
 
 ```
 Ask your AI:
-What is the DOM? Explain it as if describing how a librarian rearranges books.
+Explain event-driven programming using a restaurant service analogy.
+The waiter doesn't constantly ask "Are you ready to order?" every
+second—how does the restaurant model work instead?
+```
+
+This should reveal the pattern: staff don't constantly poll customers. Instead, customers signal (raise a hand, make eye contact) and staff respond. Events trigger responses.
+
+Follow up:
+
+```
+Continue the conversation:
+What "events" happen on a typical webpage? List as many as you can
+think of—things users do that a page might respond to.
+```
+
+### Exploration 2: The DOM
+
+JavaScript interacts with pages through something called the DOM (Document Object Model). But what is it?
+
+```
+Ask your AI:
+What is the DOM? Explain it as if describing how a librarian has a
+catalogue system that represents all the books on the shelves. The
+books are the actual HTML—what's the catalogue?
+```
+
+The DOM is JavaScript's representation of your HTML structure. When you change the DOM, the page updates visually. It's the bridge between your code and what users see.
+
+```
+Continue the conversation:
+If I want to change the text inside a paragraph using JavaScript,
+am I changing the HTML file? Or something else? Walk me through
+what actually happens.
 ```
 
 ### Exploration 3: Progressive Enhancement
 
+Here's a philosophy that separates professional developers from amateurs:
+
 ```
 Ask your AI:
-Why should websites work without JavaScript? Explain the business case.
+Why should websites work without JavaScript? Explain the business
+case, not just the technical reasons. Consider: who can't use
+JavaScript and why?
+```
+
+This conversation should reveal important realities: some users disable JavaScript for security, some have slow connections where it fails to load, some use assistive technologies that struggle with JS-heavy sites, and some corporate firewalls block scripts. Building core functionality in HTML and CSS, then *enhancing* with JavaScript, serves more customers.
+
+```
+Continue the conversation:
+Give me an example of a feature built with progressive enhancement
+versus one that fails without JavaScript. What's the difference
+in user experience?
 ```
 
 ## From Concept to Code
 
-[To be developed: Variables, functions, events, DOM manipulation, async basics]
+Let's build your JavaScript understanding progressively, from basic syntax to handling user interactions.
+
+### Where JavaScript Lives
+
+Like CSS, JavaScript can be placed in different locations:
+
+**External file** (recommended):
+```html
+<body>
+    <!-- Your HTML content -->
+    <script src="script.js"></script>
+</body>
+```
+
+**Inline in HTML** (for small scripts):
+```html
+<script>
+    console.log('Hello from JavaScript!');
+</script>
+```
+
+Place `<script>` tags at the end of `<body>` so HTML loads first. This ensures elements exist before JavaScript tries to interact with them.
+
+### Variables: Storing Information
+
+Variables hold data that can change:
+
+```javascript
+// Modern variable declarations
+let userName = 'Alex';        // Can be reassigned
+const maxItems = 10;          // Cannot be reassigned
+```
+
+Use `const` by default—it prevents accidental changes. Use `let` only when you need to reassign the value.
+
+```javascript
+const greeting = 'Welcome';    // Use const for values that won't change
+let itemCount = 0;             // Use let when you'll update the value
+itemCount = itemCount + 1;     // This works
+// greeting = 'Hello';         // This would cause an error
+```
+
+::: {.callout-warning}
+## Avoid `var`
+You'll see `var` in older code and some AI-generated examples. It has confusing scoping rules. Modern JavaScript uses `let` and `const` exclusively. If your AI suggests `var`, ask it to use `let` or `const` instead.
+:::
+
+### Data Types
+
+JavaScript handles several types of data:
+
+```javascript
+// Strings - text in quotes
+const businessName = 'Sunrise Café';
+
+// Numbers - no quotes
+const price = 4.50;
+const quantity = 3;
+
+// Booleans - true or false
+const isOpen = true;
+const hasDiscount = false;
+
+// Arrays - ordered lists
+const menuItems = ['Coffee', 'Tea', 'Pastry'];
+
+// Objects - structured data
+const product = {
+    name: 'Cappuccino',
+    price: 4.50,
+    available: true
+};
+```
+
+```
+Ask your AI:
+When would I use an array versus an object? Give me three real
+examples of data that fits each structure.
+```
+
+### Functions: Reusable Actions
+
+Functions group code that performs a specific task:
+
+```javascript
+// Defining a function
+function calculateTotal(price, quantity) {
+    const total = price * quantity;
+    return total;
+}
+
+// Calling the function
+const orderTotal = calculateTotal(4.50, 3);
+console.log(orderTotal);  // 13.5
+```
+
+Functions take inputs (parameters), do something, and optionally return a result. They're how you organise code into manageable, reusable pieces.
+
+**Arrow function syntax** (modern, compact):
+```javascript
+const calculateTotal = (price, quantity) => {
+    return price * quantity;
+};
+
+// Even shorter for simple functions
+const double = (number) => number * 2;
+```
+
+Both syntaxes work. Arrow functions are common in modern code, especially for short operations.
+
+### Finding Elements: Querying the DOM
+
+To interact with page elements, first you must find them:
+
+```javascript
+// Find one element by CSS selector
+const header = document.querySelector('header');
+const submitBtn = document.querySelector('#submit-button');
+const firstCard = document.querySelector('.card');
+
+// Find multiple elements
+const allCards = document.querySelectorAll('.card');
+```
+
+`querySelector` uses CSS selector syntax—the same patterns you learned in Chapter 2. This consistency makes finding elements intuitive.
+
+### Changing Elements
+
+Once you've found an element, you can modify it:
+
+```javascript
+// Change text content
+const heading = document.querySelector('h1');
+heading.textContent = 'Welcome Back!';
+
+// Change HTML content (use carefully)
+const container = document.querySelector('.message');
+container.innerHTML = '<strong>Success!</strong> Your order is confirmed.';
+
+// Change styles
+heading.style.color = 'navy';
+heading.style.fontSize = '2rem';
+
+// Add or remove CSS classes (preferred for styling)
+heading.classList.add('highlighted');
+heading.classList.remove('hidden');
+heading.classList.toggle('active');
+```
+
+::: {.callout-tip}
+## Classes Over Inline Styles
+Instead of setting `element.style.color = 'red'`, add a class that has those styles. This keeps your CSS in CSS and your JavaScript focused on behaviour.
+:::
+
+### Events: Responding to Users
+
+Events are things that happen—clicks, key presses, form submissions, page loads. Event listeners wait for specific events and run code when they occur:
+
+```javascript
+const button = document.querySelector('#submit-button');
+
+button.addEventListener('click', function() {
+    console.log('Button was clicked!');
+});
+```
+
+The pattern is: `element.addEventListener(eventType, handlerFunction)`
+
+**Common events:**
+
+| Event | Triggered When |
+|-------|---------------|
+| `click` | User clicks the element |
+| `submit` | Form is submitted |
+| `input` | Input value changes |
+| `keydown` | Key is pressed |
+| `mouseover` | Mouse enters element |
+| `load` | Page finishes loading |
+
+### A Complete Example: Toggle Menu
+
+Let's combine these concepts into a practical feature—a mobile navigation toggle:
+
+```html
+<button id="menu-toggle">Menu</button>
+<nav id="main-nav" class="hidden">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+```
+
+```css
+.hidden {
+    display: none;
+}
+```
+
+```javascript
+const menuButton = document.querySelector('#menu-toggle');
+const navigation = document.querySelector('#main-nav');
+
+menuButton.addEventListener('click', function() {
+    navigation.classList.toggle('hidden');
+});
+```
+
+This is progressive enhancement: the HTML structure exists, the CSS hides the menu by default on mobile, and JavaScript adds the toggle behaviour. If JavaScript fails, you could add `class="hidden"` via CSS media queries so the menu shows on larger screens regardless.
+
+### Form Validation Example
+
+Here's a practical business example—validating an email field:
+
+```html
+<form id="contact-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span id="email-error" class="error hidden"></span>
+    <button type="submit">Send</button>
+</form>
+```
+
+```javascript
+const form = document.querySelector('#contact-form');
+const emailInput = document.querySelector('#email');
+const errorSpan = document.querySelector('#email-error');
+
+emailInput.addEventListener('input', function() {
+    // Check if it looks like an email
+    if (emailInput.validity.valid) {
+        errorSpan.classList.add('hidden');
+        errorSpan.textContent = '';
+    } else {
+        errorSpan.classList.remove('hidden');
+        errorSpan.textContent = 'Please enter a valid email address';
+    }
+});
+
+form.addEventListener('submit', function(event) {
+    if (!emailInput.validity.valid) {
+        event.preventDefault();  // Stop form submission
+        errorSpan.classList.remove('hidden');
+        errorSpan.textContent = 'Please enter a valid email address';
+    }
+});
+```
+
+This validates as the user types and again on submission. Note: HTML5 provides `type="email"` validation too—JavaScript enhances the feedback, not replaces the baseline.
+
+```
+Ask your AI:
+Walk me through this form validation code line by line. What does
+event.preventDefault() do and why is it important here?
+```
+
+## Building Your Mental Model
+
+### The Event Loop
+
+JavaScript doesn't run all at once. It:
+
+1. Loads and runs initial code
+2. Waits for events
+3. When an event occurs, runs the handler
+4. Returns to waiting
+
+This is why you register event listeners—you're telling JavaScript "when this happens, run this code." The rest of the time, JavaScript is idle, waiting.
+
+```
+Ask your AI:
+Explain the JavaScript event loop using an office receptionist
+analogy. The receptionist handles visitors (events) but also has
+other tasks. How do they prioritise?
+```
+
+### The Three Layers
+
+Reinforce this mental model from earlier chapters:
+
+```
+┌─────────────────────────────────────┐
+│  JavaScript (Behaviour)              │  What responds
+├─────────────────────────────────────┤
+│  CSS (Presentation)                  │  What it looks like
+├─────────────────────────────────────┤
+│  HTML (Structure)                    │  What exists
+└─────────────────────────────────────┘
+```
+
+Each layer builds on the one below. JavaScript manipulates the DOM (HTML structure), which CSS then styles. Keeping these layers separate makes code maintainable.
+
+### Debugging with Console
+
+The browser console is your debugging friend:
+
+```javascript
+console.log('The value is:', someVariable);  // Print values
+console.error('Something went wrong!');       // Print errors
+console.table(arrayOfObjects);                // Print tables
+```
+
+Open DevTools (F12 or right-click → Inspect → Console) to see these messages. When something doesn't work, add `console.log()` statements to trace what's happening.
+
+```
+Ask your AI:
+What are common JavaScript debugging techniques? How do I figure out
+why my code isn't working?
+```
 
 ## Business Applications
 
-- **User engagement**: Interactive features increase engagement
-- **Form validation**: Prevent errors before submission
-- **Dynamic content**: Update without page reload
-- **Analytics**: Track user behaviour
+### User Engagement
+
+Interactive features keep users engaged. Think: image galleries, accordion FAQs, live search filtering. Each interaction is an opportunity to help users find what they need.
+
+### Form Validation and Data Quality
+
+Client-side validation prevents bad data before it reaches your server. This improves data quality, reduces support requests, and creates a smoother user experience.
+
+::: {.callout-warning}
+## Security Note
+Client-side validation improves user experience, but *never* trust it for security. Users can disable JavaScript or modify your code. Always validate on the server too.
+:::
+
+### Dynamic Content
+
+Loading content without page refreshes (covered more in Chapter 4) makes applications feel faster. Users don't wait for full page reloads when they just need one small update.
+
+### Analytics and User Behaviour
+
+JavaScript can track how users interact with your site: what they click, how far they scroll, where they spend time. This data informs business decisions. (Always be transparent about tracking and respect privacy.)
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 1** (effective web applications) and **ULO 3** (translating stakeholder needs). Interactive features must serve user needs—JavaScript for its own sake creates complexity without value. The ability to identify when interactivity helps versus hinders is professional judgment.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 3.1: Console Exploration (Level 1)
+
+Open any webpage and open the browser console (F12 → Console). Try these:
+
+1. Type `document.title` and press Enter. What appears?
+2. Type `document.querySelector('h1')` to find the main heading
+3. Type `document.querySelector('h1').textContent = 'I changed this!'`
+
+What happened? Refresh the page—is your change permanent? Why or why not?
+
+### Exercise 3.2: Button Interaction (Level 2)
+
+Create an HTML page with a button and a paragraph. Write JavaScript that:
+
+1. Listens for clicks on the button
+2. Changes the paragraph text when clicked
+3. Also changes the paragraph's colour (via adding a class)
+
+Test it in your browser. Use `console.log()` to confirm your click handler runs.
+
+### Exercise 3.3: Character Counter (Level 3)
+
+Create a textarea with a character limit display, like social media post composers:
+
+1. Show "0 / 280 characters" below the textarea
+2. Update the count as the user types (use the `input` event)
+3. Change the counter colour to red when approaching or exceeding the limit
+4. Disable the submit button if over the limit
+
+This combines DOM queries, event listeners, conditionals, and class manipulation.
+
+### Exercise 3.4: Progressive Enhancement Audit (Level 4)
+
+Find a website that heavily uses JavaScript (a web application). Disable JavaScript in your browser (Settings → Privacy → JavaScript) and try to use the site.
+
+1. What still works?
+2. What breaks completely?
+3. For the broken features, how could they have been built with progressive enhancement?
+
+Write a 300-word assessment of this site's JavaScript dependency and its business implications.
+
+### Exercise 3.5: Interactive Feature Design (Level 5)
+
+A local bookshop wants their website to have an interactive "Book Finder" feature. Users should be able to filter books by genre, search by title, and sort by price or rating.
+
+1. Design the HTML structure needed
+2. Identify what events you'd listen for
+3. Describe what JavaScript would do for each interaction
+4. Consider: what should work without JavaScript?
+
+Don't write the full code—design the approach. Document your thinking, then discuss your design with your AI partner. What did they suggest differently?
 
 ## Chapter Summary
 
-- JavaScript enables interaction
-- Event-driven thinking is fundamental
-- Progressive enhancement ensures accessibility
-- Behaviour enhances but shouldn't replace structure
+- JavaScript adds behaviour—the ability to respond to user actions
+- Event-driven programming means listening for events and responding
+- The DOM is JavaScript's interface to the page structure
+- Progressive enhancement builds on working HTML/CSS, not replacing it
+- Debugging with `console.log()` helps trace problems
+- Interactive features should serve user needs, not demonstrate technical skill
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 4, ensure you can:
+
+- [ ] Explain event-driven programming in plain language
+- [ ] Write basic JavaScript: variables, functions, conditionals
+- [ ] Find elements in the DOM using `querySelector`
+- [ ] Attach event listeners to respond to user actions
+- [ ] Modify element content, classes, and styles via JavaScript
+- [ ] Articulate why progressive enhancement matters for business
+- [ ] Use the browser console for basic debugging
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Interaction Audit**: Look at a website you use frequently. What interactive features does it have? For each one, describe what event triggers it and what the response is.
+
+2. **Progressive Enhancement Thinking**: Think of a common web feature (like a dropdown menu or image carousel). How would you build it so it works without JavaScript?
+
+3. **AI Conversation Reflection**: What JavaScript concept was hardest to grasp? What question to your AI partner helped clarify it?
+
+4. **Business Value**: When does adding JavaScript interactivity help users, and when does it just add complexity? Give examples of each.
 
 ## Next Steps
 
-In Chapter 4, we'll connect to the world through APIs – fetching data from other services and sending data to servers. This transforms standalone pages into connected applications.
+You can now build pages that respond to users. But modern web applications do more—they connect to services, fetch data, and send information to servers.
+
+In @sec-connection, we'll explore APIs—how your JavaScript can request data from external services and submit data to be processed. This transforms your pages from standalone documents into connected applications that interact with the wider web.
+
+The JavaScript fundamentals you've learned become the foundation for asynchronous programming and data-driven interfaces.

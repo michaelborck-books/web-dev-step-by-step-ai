@@ -1,69 +1,580 @@
 # Presentation: CSS as Visual Communication {#sec-presentation}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-CSS controls how structured content looks. But it's more than decoration – it's **visual communication**. Colours, spacing, and layout convey meaning, guide attention, and build trust.
+In @sec-structure, you learned to describe what content *is*. Now we'll control how content *looks*—but this isn't decoration. It's **visual communication**.
+
+CSS (Cascading Style Sheets) determines colours, fonts, spacing, and layout. But these choices aren't arbitrary. Every visual decision communicates something: professionalism, playfulness, urgency, calm. A hospital website and a children's toy store might have identical HTML structure, but their CSS tells completely different stories.
+
+Here's the key insight: **structure and presentation are deliberately separate**. Your HTML says "this is a heading"—it doesn't say "this should be blue and 24 pixels tall." CSS handles appearance. This separation means you can completely redesign a website without touching its content, or update content without breaking the design.
 
 ## Understanding Through Design
 
-Think of two cafés with identical menus but different interiors. The food is the same (content), but the atmosphere (presentation) creates completely different experiences.
+Think of two cafés with identical menus. Same coffee, same pastries, same prices.
 
-CSS is your atmosphere.
+**Café A**: Exposed brick, warm lighting, comfortable armchairs, handwritten chalkboard menu, soft jazz playing.
+
+**Café B**: White walls, fluorescent lights, plastic chairs, printed menu in a laminated folder, no music.
+
+The *content* is identical—but would you feel the same about visiting each one? The atmosphere shapes your entire perception of the business. One feels welcoming and worth paying premium prices; the other feels like a waiting room.
+
+CSS is your website's atmosphere. The content (HTML) might be excellent, but if the presentation feels amateur, untrustworthy, or confusing, users leave.
+
+::: {.callout-tip}
+## The Atmosphere Test
+Look at any website and ask: "What is this design trying to communicate?" Before you read the words, the visual design has already told you whether this is playful or serious, cheap or premium, trustworthy or suspicious.
+:::
 
 ## Discovering Presentation with Your AI Partner
 
-### Exploration 1: Separation of Concerns
+### Exploration 1: Why Separate Structure and Style?
 
 ```
 Ask your AI:
-Why do we separate HTML (structure) from CSS (presentation)? Explain using a newspaper analogy.
+Why do we keep HTML (structure) and CSS (presentation) in separate
+languages? Explain using a newspaper analogy—the same news stories
+might appear in a broadsheet and a tabloid.
 ```
 
-### Exploration 2: Mobile-First
+This conversation should reveal the power of separation: one set of content, many possible presentations. News services send identical stories to papers worldwide, but each paper styles them differently. Similarly, your HTML content can have different CSS applied for screen, print, mobile, or accessibility needs.
+
+Follow up:
+
+```
+Continue the conversation:
+What problems would occur if we put styling directly into HTML?
+What if every heading had to specify its own colour and size?
+```
+
+### Exploration 2: Mobile-First as Business Strategy
+
+More than half of web traffic comes from mobile devices. But mobile-first isn't just about phones—it's a design philosophy.
 
 ```
 Ask your AI:
-Explain mobile-first design as a business strategy, not just a technical approach
+Explain mobile-first design as a business strategy, not just a
+technical approach. Why would designing for mobile first lead to
+better experiences for everyone?
+```
+
+Your AI should explain how mobile constraints force clarity: limited space means prioritising what matters, slow connections mean optimising performance, touch targets mean accessible interfaces. Designing for these constraints first creates better experiences everywhere.
+
+```
+Continue the conversation:
+What happens when companies design for desktop first and then try
+to "make it work" on mobile?
 ```
 
 ### Exploration 3: Visual Hierarchy
 
+Every page has multiple elements competing for attention. Visual hierarchy tells users what to look at first, second, third—guiding them through your content intentionally.
+
 ```
 Ask your AI:
-How does visual hierarchy guide user attention? Show me with a simple example.
+How do designers create visual hierarchy—the sense that some
+elements are more important than others? What tools do they use
+besides just making things bigger?
+```
+
+This should reveal tools beyond size: colour contrast, whitespace, position, typography weight. A small red button can dominate over a large grey headline because colour attracts attention.
+
+```
+Continue the conversation:
+Show me a simple example of the same three elements (heading,
+paragraph, button) arranged with different visual hierarchies
+for different purposes.
 ```
 
 ## From Concept to Code
 
-[To be developed: CSS basics, selectors, box model, flexbox, responsive design]
+Let's build your CSS understanding progressively, from basic syntax to practical layouts.
+
+### CSS Syntax: Selectors, Properties, Values
+
+CSS follows a simple pattern:
+
+```css
+selector {
+    property: value;
+}
+```
+
+The **selector** identifies which HTML elements to style. The **property** is what aspect to change. The **value** is what to change it to.
+
+```css
+h1 {
+    color: navy;
+    font-size: 2rem;
+}
+```
+
+This says: "Find all `<h1>` elements. Make their text navy. Make them 2rem (roughly 32 pixels) tall."
+
+### Connecting CSS to HTML
+
+CSS can live in three places:
+
+**External stylesheet** (recommended for most work):
+```html
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+**Internal stylesheet** (in the HTML file):
+```html
+<head>
+    <style>
+        h1 { color: navy; }
+    </style>
+</head>
+```
+
+**Inline styles** (on individual elements—generally avoid):
+```html
+<h1 style="color: navy;">Welcome</h1>
+```
+
+External stylesheets keep presentation separate from structure. One CSS file can style an entire website, and changes propagate everywhere instantly.
+
+```
+Ask your AI:
+What are the advantages and disadvantages of each method of adding
+CSS? When might you use each one?
+```
+
+### Common Selectors
+
+Selectors target elements in different ways:
+
+```css
+/* Element selector - all paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Class selector - elements with class="highlight" */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID selector - the one element with id="main-header" */
+#main-header {
+    font-size: 2.5rem;
+}
+
+/* Descendant selector - paragraphs inside articles */
+article p {
+    margin-bottom: 1em;
+}
+```
+
+Classes (`.classname`) are your workhorses—reusable styles you can apply to any element. IDs (`#idname`) should be unique per page and are less commonly used in modern CSS.
+
+### The Box Model
+
+Every HTML element generates a rectangular box. Understanding this box model is essential for layout:
+
+```
+┌─────────────────────────────────────┐
+│             margin                   │
+│   ┌─────────────────────────────┐   │
+│   │         border               │   │
+│   │   ┌─────────────────────┐   │   │
+│   │   │      padding         │   │   │
+│   │   │   ┌─────────────┐   │   │   │
+│   │   │   │   content    │   │   │   │
+│   │   │   └─────────────┘   │   │   │
+│   │   └─────────────────────┘   │   │
+│   └─────────────────────────────┘   │
+└─────────────────────────────────────┘
+```
+
+- **Content**: The actual text or image
+- **Padding**: Space between content and border (inside the box)
+- **Border**: The edge of the box
+- **Margin**: Space outside the border (between boxes)
+
+```css
+.card {
+    padding: 20px;      /* Space inside */
+    border: 1px solid #ccc;
+    margin: 10px;       /* Space outside */
+}
+```
+
+::: {.callout-warning}
+## Box-Sizing Gotcha
+By default, width and height don't include padding or border. A 200px box with 20px padding becomes 240px wide. Modern practice is to add `box-sizing: border-box;` so width includes everything:
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
+
+This makes layout calculations much more intuitive.
+:::
+
+```
+Ask your AI:
+Explain the difference between padding and margin using a picture
+frame analogy. The picture is the content—what are the padding,
+border, and margin?
+```
+
+### Layout with Flexbox
+
+Flexbox is the modern way to arrange elements. It makes previously difficult tasks—like centring or equal-height columns—simple.
+
+```css
+.container {
+    display: flex;
+}
+```
+
+This single line transforms the container. Its children become "flex items" that can be arranged in powerful ways:
+
+```css
+.container {
+    display: flex;
+    justify-content: space-between;  /* Horizontal distribution */
+    align-items: center;             /* Vertical alignment */
+    gap: 20px;                       /* Space between items */
+}
+```
+
+**Common flex patterns:**
+
+Navigation bar:
+```css
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+```
+
+Centred content:
+```css
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+```
+
+Card grid (with wrap):
+```css
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    flex: 1 1 300px;  /* Grow, shrink, minimum 300px */
+}
+```
+
+```
+Ask your AI:
+Show me how to create a simple navigation bar with a logo on the
+left and three links on the right using flexbox. Explain each
+property you use.
+```
+
+### Responsive Design: Media Queries
+
+Responsive design adapts layout to different screen sizes. Media queries let you apply CSS conditionally:
+
+```css
+/* Base styles (mobile-first) */
+.container {
+    padding: 1rem;
+}
+
+/* Styles for screens 768px and wider */
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+```
+
+Mobile-first means your base CSS is for mobile, then you add complexity for larger screens. This approach naturally prioritises essential content.
+
+```css
+/* Mobile: single column */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Tablet and up: two columns */
+@media (min-width: 768px) {
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .feature {
+        flex: 1 1 45%;
+    }
+}
+
+/* Desktop: three columns */
+@media (min-width: 1024px) {
+    .feature {
+        flex: 1 1 30%;
+    }
+}
+```
+
+```
+Ask your AI:
+Walk me through how a three-column desktop layout should adapt as
+the screen gets smaller. What should happen at each breakpoint
+and why?
+```
+
+### Typography and Colour Basics
+
+Typography and colour have immediate visual impact:
+
+```css
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #0066cc;
+}
+
+a:hover {
+    color: #004499;
+}
+```
+
+Using `rem` for sizes keeps everything relative to the base font size, making your design more adaptable:
+
+```css
+h1 { font-size: 2.5rem; }    /* 40px if base is 16px */
+h2 { font-size: 2rem; }      /* 32px */
+h3 { font-size: 1.5rem; }    /* 24px */
+p  { font-size: 1rem; }      /* 16px */
+```
+
+## Building Your Mental Model
+
+### The Cascade: Why "Cascading"?
+
+CSS rules can conflict. When multiple rules target the same element, the cascade determines which wins:
+
+1. **Specificity**: More specific selectors win (`#id` beats `.class` beats `element`)
+2. **Source order**: Later rules override earlier ones (if specificity is equal)
+3. **Importance**: `!important` overrides everything (but avoid using it)
+
+```css
+p { color: black; }           /* Specificity: 0,0,1 */
+.highlight { color: yellow; } /* Specificity: 0,1,0 - wins */
+#special { color: red; }      /* Specificity: 1,0,0 - wins over class */
+```
+
+```
+Ask your AI:
+Why is understanding specificity important? What problems occur
+when developers don't understand how the cascade works?
+```
+
+### The Flow: Block vs Inline
+
+HTML elements have default display behaviours:
+
+**Block elements** (`<div>`, `<p>`, `<h1>`, `<section>`):
+- Stack vertically
+- Take full available width
+- Can have width and height set
+
+**Inline elements** (`<span>`, `<a>`, `<strong>`):
+- Flow horizontally with text
+- Take only the space they need
+- Cannot have width and height set (use `display: inline-block` if needed)
+
+Understanding flow explains why elements appear where they do before you apply any layout CSS.
+
+### The Mental Stack
+
+When you look at a webpage, think in layers:
+
+1. **Content layer** (HTML): What exists
+2. **Style layer** (CSS): How it looks
+3. **Behaviour layer** (JavaScript, Chapter 3): How it responds
+
+CSS only controls layer 2. It can't create content or make things interactive—it controls visual presentation of whatever HTML provides.
 
 ## Business Applications
 
-- **Brand consistency**: CSS enforces visual standards
-- **User experience**: Good design builds trust
-- **Mobile reach**: Responsive design serves all devices
-- **Conversion**: Visual hierarchy guides users to action
+### Brand Consistency
+
+CSS variables (custom properties) enforce brand standards across an entire site:
+
+```css
+:root {
+    --brand-primary: #2563eb;
+    --brand-secondary: #1e40af;
+    --font-heading: 'Georgia', serif;
+    --font-body: system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--brand-primary);
+}
+```
+
+Change the variable once, and every element using it updates instantly. This is how large organisations maintain consistency across dozens of pages.
+
+### User Experience and Trust
+
+Studies consistently show that users judge website credibility in milliseconds, based primarily on visual design. Professional presentation builds trust; amateur presentation creates suspicion—regardless of how good the actual content is.
+
+```
+Ask your AI:
+What visual characteristics make a website feel "trustworthy" versus
+"suspicious"? Think about spacing, typography, colour, and layout.
+```
+
+### Mobile Reach
+
+If your site doesn't work on mobile, you're excluding over half your potential audience. Responsive design isn't a feature—it's a baseline requirement for any business website.
+
+### Conversion and Visual Hierarchy
+
+Where users look determines what they do. Visual hierarchy guides attention to calls-to-action, important information, and conversion points. Poor hierarchy means users miss what matters.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 1** (effective web applications) and **ULO 4** (technology selection). CSS choices affect user experience, brand perception, and business outcomes. The ability to evaluate and implement appropriate visual design is essential professional skill.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 2.1: Style Inspection (Level 1)
+
+Using browser DevTools (right-click → Inspect), examine a website you use regularly:
+
+1. Find an element and identify its box model (content, padding, border, margin)
+2. Locate where its colour is defined in the CSS
+3. Find a media query and identify what changes at different screen sizes
+4. Identify at least one flexbox container
+
+Document your findings with screenshots.
+
+### Exercise 2.2: Basic Styling (Level 2)
+
+Take the semantic HTML page from Chapter 1's exercises. Create an external stylesheet that:
+
+1. Sets a readable base font and line height
+2. Styles the header with a background colour
+3. Adds appropriate padding to sections
+4. Creates visual distinction between the main content and footer
+
+Focus on readability and visual hierarchy—not decoration.
+
+### Exercise 2.3: Responsive Layout (Level 3)
+
+Create a "features" section with three items. Each item has:
+- An icon or emoji placeholder
+- A heading
+- A short description
+
+Using flexbox, make this:
+- Single column on mobile (under 768px)
+- Three columns on desktop
+
+Write the CSS mobile-first, adding complexity with media queries.
+
+### Exercise 2.4: Design Analysis (Level 4)
+
+Find two competing businesses in the same industry (e.g., two accounting firms, two coffee shops). Analyse their websites:
+
+1. How does each use visual hierarchy? What's emphasised?
+2. What do their colour choices communicate?
+3. How does typography differ and what does it suggest?
+4. Which feels more trustworthy? Why?
+
+Write a 300-word comparison explaining how CSS choices reflect (or undermine) each brand's positioning.
+
+### Exercise 2.5: Design System (Level 5)
+
+Create a mini design system for a hypothetical business. Define:
+
+1. A colour palette (primary, secondary, accent, text, background)
+2. Typography choices (headings, body, sizes)
+3. Spacing scale (consistent padding/margin values)
+4. A set of CSS variables implementing these choices
+
+Document your decisions: why these colours? Why these fonts? How do these choices communicate the brand personality?
+
+Apply your system to style a simple page, then have your AI partner critique it.
 
 ## Chapter Summary
 
-- CSS controls visual presentation
-- Mobile-first is a business strategy
-- Visual hierarchy guides user attention
-- Presentation and structure serve different purposes
+- CSS controls visual presentation separately from HTML structure
+- The box model (content, padding, border, margin) explains how elements take space
+- Flexbox provides powerful, intuitive layout capabilities
+- Media queries enable responsive design that adapts to any device
+- Visual design communicates brand, builds trust, and guides user attention
+- Mobile-first design creates better experiences for everyone
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 3, ensure you can:
+
+- [ ] Explain why structure and presentation are separate
+- [ ] Write CSS selectors to target specific elements
+- [ ] Describe the box model and how padding differs from margin
+- [ ] Create flexible layouts with flexbox
+- [ ] Write mobile-first CSS using media queries
+- [ ] Articulate how visual design affects business outcomes
+- [ ] Use browser DevTools to inspect and understand CSS
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Design Awareness**: Look at three websites with very different visual styles. How does each CSS approach reflect its purpose and audience?
+
+2. **Mobile Testing**: View a website you built (or one you use) on your phone. What works well? What's frustrating? How would you improve it?
+
+3. **AI Conversation Reflection**: What CSS concept was hardest to grasp? What question to your AI partner helped clarify it?
+
+4. **Business Connection**: Think of a business you might create a website for. What visual atmosphere would best serve that business? Why?
 
 ## Next Steps
 
-In Chapter 3, we'll add behaviour with JavaScript – making pages respond to user actions. Structure, presentation, and behaviour form the three pillars of web development.
+You now control both structure (HTML) and presentation (CSS). But websites today aren't just documents to read—they're applications to interact with.
+
+In @sec-behaviour, we'll add JavaScript—the third pillar of web development. JavaScript lets pages respond to user actions: clicks, scrolls, form submissions. It transforms static documents into dynamic experiences.
+
+The HTML structure and CSS styling you've learned become the canvas that JavaScript brings to life.

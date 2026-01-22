@@ -1,98 +1,448 @@
 # Structure: HTML as Information Architecture {#sec-structure}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
 Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.
 
-A web page is a document. Like any document – a book, a report, a menu – it has structure. HTML is simply the language we use to describe that structure.
+Every document you've ever read has structure. A book has chapters, sections, and paragraphs. A business report has headings, bullet points, and tables. A restaurant menu has categories, items, and descriptions. This structure isn't decoration—it's how we communicate meaning.
+
+HTML (HyperText Markup Language) is simply the language we use to describe document structure for the web. When you write HTML, you're not designing how something looks—you're declaring what something *is*.
+
+This distinction matters enormously. A heading isn't big, bold text. A heading *is* a heading—a structural element that indicates hierarchy and importance. How it appears is a separate concern entirely.
 
 ## Understanding Through Architecture
 
-Think of a building:
+Think of a well-designed building:
 
-- The **foundation** supports everything
-- **Walls** divide space into meaningful areas
-- **Signs** tell you what each area is for
-- **Doors** connect different spaces
+- The **foundation** supports everything above it
+- **Walls and rooms** divide space into meaningful areas
+- **Signs and labels** tell you what each area is for
+- **Doors and corridors** connect different spaces
+- **Building codes** ensure safety and accessibility
 
-HTML works the same way. Elements create structure. Tags label what things are.
+Now think about a web page:
+
+- The **document declaration** establishes what kind of document this is
+- **Semantic elements** divide content into meaningful sections
+- **Tags** label what each piece of content represents
+- **Links** connect pages and resources
+- **Web standards** ensure accessibility across devices
+
+The parallel is precise. An architect doesn't just make a building that stands—they create spaces that people can navigate, understand, and use. A web developer doesn't just make a page that displays—they create documents that humans can read and machines can process.
+
+::: {.callout-tip}
+## The Architecture Mindset
+When you look at any web page, train yourself to see structure first, appearance second. Ask: "What are the meaningful sections here? How is the content organised? What is each element's purpose?"
+:::
 
 ## Discovering Structure with Your AI Partner
 
+Let's use AI to explore these concepts before we see any code. Remember from Chapter 0: we're using AI to build understanding, not to avoid learning.
+
 ### Exploration 1: Document Anatomy
+
+Before we think about HTML at all, let's think about documents:
 
 ```
 Ask your AI:
-If I showed you a restaurant menu, what structural elements would you identify? Don't use any HTML terms yet.
+If I showed you a restaurant menu, what structural elements would you
+identify? Don't use any HTML terms yet—just describe the organisation
+you see in plain English.
 ```
+
+Notice what your AI identifies: categories of food, individual items, descriptions, prices, perhaps special callouts for dietary information. This is structure—pure information architecture that exists independent of how it's presented.
+
+Now follow up:
+
+```
+Continue the conversation:
+How would those same structural elements appear in a company's
+"About Us" page?
+```
+
+The specific content differs, but structural patterns repeat. Headings introduce sections. Paragraphs contain flowing text. Lists group related items. This pattern recognition is the foundation of HTML thinking.
 
 ### Exploration 2: Semantic Meaning
 
-```
-Ask your AI:
-Explain "semantic HTML" using a library catalog analogy
-```
-
-### Exploration 3: Simplest Page
+The word "semantic" means "relating to meaning." Semantic HTML uses elements that describe what content *is*, not how it should *look*.
 
 ```
 Ask your AI:
-Show me the absolute simplest valid HTML page with just a heading and paragraph
+Explain "semantic HTML" using a library catalogue analogy. Why would
+a librarian care whether a book is labelled as "fiction" versus just
+"on shelf 3"?
 ```
+
+This conversation should reveal why meaningful labels matter. A library where books are only identified by shelf location would be nearly useless. Similarly, a web page where content is only identified by its visual appearance loses meaning for search engines, screen readers, and future maintainers.
+
+Follow up:
+
+```
+Continue the conversation:
+What problems occur when web pages use visual-only structure—like
+making text big and bold instead of marking it as a heading?
+```
+
+### Exploration 3: The Simplest Valid Page
+
+Now let's see actual HTML, but the simplest possible version:
+
+```
+Ask your AI:
+Show me the absolute simplest valid HTML page that contains just a
+heading and a paragraph. Explain what each line does as if I've never
+seen code before.
+```
+
+Your AI should give you something like:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>This is a paragraph of text.</p>
+</body>
+</html>
+```
+
+Don't just accept this—have a conversation about it:
+
+```
+Continue the conversation:
+Why is lang="en" important? Who or what uses that information?
+```
+
+```
+Continue the conversation:
+What happens if I leave out the DOCTYPE? Would the page still display?
+```
+
+These conversations build understanding that copying code never provides.
 
 ## From Concept to Code
 
-[To be developed: Basic HTML structure, semantic elements]
+Let's build your HTML understanding progressively, starting from the absolute basics.
+
+### The Document Container
+
+Every HTML page starts with a declaration and a container:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Everything goes here -->
+</html>
+```
+
+The `<!DOCTYPE html>` tells browsers "this is a modern HTML document." The `<html>` element is the root container for everything else. The `lang` attribute declares the language—essential for screen readers and translation tools.
+
+### The Two Main Sections
+
+Inside the HTML container, every page has exactly two sections:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata: information ABOUT the page -->
+    <meta charset="UTF-8">
+    <title>My Business</title>
+</head>
+<body>
+    <!-- Content: what people actually see -->
+</body>
+</html>
+```
+
+The `<head>` contains metadata—information about the page that doesn't appear on screen. The `<body>` contains the actual content visitors see and interact with.
+
+Think of it like a business letter: the `<head>` is the envelope with addresses and stamps, while the `<body>` is the letter inside.
+
+### Semantic Content Elements
+
+Now let's add meaningful content. HTML provides elements that describe *what* content is:
+
+```html
+<body>
+    <header>
+        <h1>Sunrise Café</h1>
+        <p>Fresh coffee, warm welcome</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Our Story</h2>
+            <p>Founded in 2019, Sunrise Café began with a simple
+               belief: great coffee brings people together.</p>
+        </section>
+
+        <section>
+            <h2>Visit Us</h2>
+            <p>123 Main Street, open daily from 7am to 5pm.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sunrise Café</p>
+    </footer>
+</body>
+```
+
+Notice what we've communicated:
+
+- `<header>` — the introductory content for the page
+- `<main>` — the primary content (there should only be one)
+- `<section>` — distinct, thematically grouped content
+- `<footer>` — closing information
+- `<h1>`, `<h2>` — heading hierarchy (h1 is most important)
+- `<p>` — paragraphs of text
+
+A screen reader can now navigate this page by headings. Search engines understand what's primary content versus footer material. Future developers can immediately grasp the page structure.
+
+### Common Semantic Elements
+
+Here are the structural elements you'll use most often:
+
+| Element | Purpose | Example Use |
+|---------|---------|-------------|
+| `<header>` | Introductory content | Site branding, navigation |
+| `<nav>` | Navigation links | Main menu, breadcrumbs |
+| `<main>` | Primary page content | The "meat" of the page |
+| `<section>` | Thematic grouping | Chapters, tabbed content |
+| `<article>` | Self-contained content | Blog post, news story |
+| `<aside>` | Related but separate | Sidebar, pull quote |
+| `<footer>` | Closing content | Copyright, contact links |
+
+::: {.callout-warning}
+## Common Mistake
+Don't choose elements based on how they look by default. Choose them based on what the content *is*. A `<section>` isn't "a box"—it's a thematic grouping of content. Appearance is CSS's job (Chapter 2).
+:::
+
+### Headings Create Hierarchy
+
+Headings aren't just "big text"—they create a document outline:
+
+```html
+<h1>Sunrise Café</h1>           <!-- Page title (one per page) -->
+    <h2>Our Menu</h2>           <!-- Major section -->
+        <h3>Hot Drinks</h3>     <!-- Subsection -->
+        <h3>Cold Drinks</h3>    <!-- Subsection -->
+    <h2>Our Story</h2>          <!-- Major section -->
+    <h2>Contact Us</h2>         <!-- Major section -->
+```
+
+This hierarchy should make sense as an outline. Don't skip levels (no jumping from h2 to h4) and don't use headings just to make text bigger.
+
+```
+Ask your AI:
+Show me a properly structured heading hierarchy for a small business
+website with pages for Home, Services, About, and Contact. Then show
+me a common mistake beginners make with headings.
+```
+
+## Building Your Mental Model
+
+### The Tree Structure
+
+HTML forms a tree, like a family tree or organisation chart:
+
+```
+html
+├── head
+│   ├── meta
+│   └── title
+└── body
+    ├── header
+    │   ├── h1
+    │   └── p
+    ├── main
+    │   ├── section
+    │   │   ├── h2
+    │   │   └── p
+    │   └── section
+    │       ├── h2
+    │       └── p
+    └── footer
+        └── p
+```
+
+Elements contain other elements. This nesting creates relationships: the `<h2>` belongs to its `<section>`, which belongs to `<main>`, which belongs to `<body>`.
+
+```
+Ask your AI:
+Explain parent, child, and sibling relationships in HTML using a
+company organisational chart as an analogy.
+```
+
+### Tags, Elements, and Attributes
+
+Let's clarify terminology:
+
+```html
+<a href="about.html">About Us</a>
+```
+
+- **Tag**: `<a>` is the opening tag, `</a>` is the closing tag
+- **Element**: The complete unit from opening to closing tag, including content
+- **Attribute**: `href="about.html"` provides additional information
+- **Content**: "About Us" is the text content between tags
+
+### The Box Model Preview
+
+Every HTML element creates an invisible box on the page. These boxes stack and nest according to the document structure. In Chapter 2, we'll learn to control these boxes with CSS. For now, understand that structure creates boxes, and boxes create layout.
+
+```
+Ask your AI:
+If I put a section inside a main element, and two paragraphs inside
+that section, how many "boxes" have I created? Describe how they
+would stack.
+```
 
 ## Business Applications
 
-Why structure matters for business:
+### Search Engine Optimisation (SEO)
 
-- **SEO**: Search engines understand structured content
-- **Accessibility**: Screen readers navigate structure
-- **Maintenance**: Well-structured pages are easier to update
-- **Professionalism**: Structure reflects organisational thinking
+Search engines read your HTML structure to understand your content. A well-structured page with clear headings, semantic sections, and meaningful hierarchy ranks better than a soup of `<div>` elements.
+
+```
+Ask your AI:
+How do search engines like Google use HTML structure to understand
+what a page is about? What happens when structure is missing or
+confusing?
+```
+
+### Accessibility
+
+Screen readers—software used by visually impaired people—navigate by structure. Users can jump between headings, skip to main content, or list all navigation links. Without semantic HTML, this navigation is impossible.
+
+This isn't just ethical—it's often legal. Many jurisdictions require accessible websites for businesses, government, and education.
+
+### Maintainability
+
+Well-structured HTML is easier to update. When sections are clearly marked, finding and changing content takes minutes instead of hours. Six months from now, you (or someone else) will thank you for clean structure.
+
+### Professional Credibility
+
+When potential employers or clients view your page source, structure tells them about your professionalism. Clean, semantic HTML signals someone who understands web fundamentals—not just someone who copied code until something worked.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 1** (design and evaluate effective web applications) and **ULO 2** (professional skills). Structure isn't visible to casual viewers, but it's visible to search engines, screen readers, developers, and anyone who inspects your code.
+:::
 
 ## Practice Exercises
 
-### Exercise 1.1 (Level 1)
-[To be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
 
-### Exercise 1.2 (Level 2)
-[To be developed]
+### Exercise 1.1: Document Analysis (Level 1)
 
-### Exercise 1.3 (Level 3)
-[To be developed]
+Find a simple webpage (a local business, a restaurant, a small company). View its source (right-click → View Page Source). Identify:
 
-### Exercise 1.4 (Level 4)
-[To be developed]
+1. The `<!DOCTYPE>` declaration
+2. The `<head>` and `<body>` sections
+3. At least three semantic elements (`<header>`, `<main>`, `<footer>`, `<nav>`, `<section>`, `<article>`)
+4. The heading hierarchy (`<h1>` through `<h6>`)
 
-### Exercise 1.5 (Level 5)
-[To be developed]
+Document your findings. Is this page well-structured or poorly structured? Why?
+
+### Exercise 1.2: Structure First (Level 2)
+
+Without writing any HTML, create a structural outline for a personal portfolio page. List:
+
+- What would go in the header?
+- What sections would the main content have?
+- What information belongs in the footer?
+- What's the heading hierarchy?
+
+Then, with your AI partner, translate your outline into semantic HTML. Compare your outline with the final code—did the structure remain clear?
+
+### Exercise 1.3: Fix the Structure (Level 3)
+
+Here's a poorly structured page. Identify the problems and rewrite it with proper semantic HTML:
+
+```html
+<html>
+<div>
+    <div style="font-size: 32px; font-weight: bold;">My Business</div>
+    <div style="font-size: 24px; font-weight: bold;">About</div>
+    <div>We are a great company.</div>
+    <div style="font-size: 24px; font-weight: bold;">Contact</div>
+    <div>Email us at hello@example.com</div>
+    <div style="font-size: 12px;">Copyright 2024</div>
+</div>
+</html>
+```
+
+List each problem you find and explain why it matters.
+
+### Exercise 1.4: Business Requirements (Level 4)
+
+A local bakery asks you to create their website. They mention:
+
+- They want their hours prominently displayed
+- They have three categories of products (bread, pastries, cakes)
+- They want to show their story and values
+- They need contact information and a map
+
+Create a structural plan that addresses their requirements. Which semantic elements would you use for each requirement? Justify your choices in business terms—why does proper structure benefit this bakery?
+
+### Exercise 1.5: Semantic Debate (Level 5)
+
+Should a "team members" section on an About page use `<article>` for each person, or `<section>`, or neither?
+
+Research the HTML specification's definitions for both elements. Have a conversation with your AI partner exploring arguments for each choice. Write a short recommendation (200-300 words) defending your position with evidence from web standards.
+
+This exercise has no single correct answer—it develops your ability to make and defend technical decisions (ULO 4).
 
 ## Chapter Summary
 
-- HTML describes document structure
-- Semantic elements convey meaning
-- Structure serves both humans and machines
-- Good structure is a business asset
+- HTML describes document structure, not appearance
+- Semantic elements convey meaning to humans and machines
+- Every page has `<head>` (metadata) and `<body>` (content)
+- Headings create hierarchy—don't skip levels or use them for styling
+- Structure benefits SEO, accessibility, maintainability, and professionalism
+- The structure you create is as important as the content you write
 
 ## Reflection
 
-- [ ] Can explain HTML's purpose without using technical jargon
-- [ ] Understand semantic vs. presentational markup
-- [ ] Can identify structural elements in any document
-- [ ] See how structure serves business goals
+Before moving to Chapter 2, ensure you can:
+
+- [ ] Explain HTML's purpose without using technical jargon
+- [ ] Identify at least six semantic HTML elements and their purposes
+- [ ] Describe the difference between semantic and presentational markup
+- [ ] Create a document outline before writing code
+- [ ] Explain why structure matters for business (SEO, accessibility, maintenance)
+- [ ] View a page's source and assess its structural quality
+- [ ] Have a productive conversation with AI about HTML concepts
 
 ## Your Learning Journal
 
-[Prompts to be developed]
+Record your responses to these prompts:
+
+1. **Structure Spotting**: Look at three websites you use regularly. What structural patterns do they share? What semantic elements can you identify?
+
+2. **AI Conversation Reflection**: What was the most useful question you asked your AI partner in this chapter? What made it effective?
+
+3. **Concept Connection**: How does HTML structure relate to other kinds of structure you encounter (documents, buildings, organisations)?
+
+4. **Lingering Questions**: What aspects of HTML structure are still unclear? Write these as questions to explore with your AI partner.
 
 ## Next Steps
 
-In Chapter 2, we'll explore CSS – how to control the visual presentation of our structured content. Structure and presentation are deliberately separate, and understanding why is key to professional web development.
+You now understand how to describe what content *is*. But a page with only HTML looks plain—black text on white background, default fonts, minimal layout.
+
+In @sec-presentation, we'll explore CSS—how to control the visual presentation of our structured content. Structure and presentation are deliberately separate in web development, and understanding why is key to professional practice.
+
+The structure you've learned to create becomes the foundation that CSS styles. Good structure makes styling straightforward; poor structure makes it a struggle.

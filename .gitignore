@@ -39,3 +39,5 @@ venv/
 *.tmp
 notes/*.md
 !notes/.gitkeep
+
+**/*.quarto_ipynb
