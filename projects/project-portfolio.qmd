@@ -1,0 +1,57 @@
+# Project: Portfolio Website {#sec-project-portfolio}
+
+::: {.callout-note}
+## Project Status: Stub
+This project needs full specification development.
+:::
+
+## Project Overview
+
+Build a personal portfolio website demonstrating your mastery of HTML, CSS, JavaScript, and API integration.
+
+**Aligned with**: Assessment 1 in ISYS3004
+
+## Learning Outcomes Addressed
+
+- **ULO 1**: Design and implement effective web applications
+- **ULO 3**: Analyse requirements to inform design
+- **ULO 5**: Evaluate web technologies
+
+## Requirements
+
+### Functional Requirements
+
+- Home page with introduction
+- About page with background
+- Projects/Work showcase
+- Contact information
+- Responsive design (mobile, tablet, desktop)
+- API integration (e.g., GitHub projects, weather widget)
+
+### Technical Requirements
+
+- Semantic HTML5
+- CSS with mobile-first approach
+- JavaScript for interactivity
+- API data fetching
+- Accessibility basics (WCAG 2.1 AA)
+
+## AI Collaboration Guidelines
+
+Document your AI collaboration:
+
+1. What prompts helped most?
+2. What did you modify from AI suggestions?
+3. What did AI get wrong?
+4. What did you learn through the collaboration?
+
+## Evaluation Criteria
+
+[To be developed: Rubric]
+
+## Submission
+
+- Live URL (GitHub Pages or similar)
+- Source code repository
+- AI collaboration log
+- Reflection document

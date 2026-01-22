@@ -1,0 +1,69 @@
+# Your Development Career {#sec-development-career}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+Technical skills get you interviews. **Professional skills get you hired and promoted.** This chapter covers the non-technical aspects of a development career: portfolios, networking, communication, and continuous growth.
+
+## Understanding Through Positioning
+
+You're not just a developer – you're a professional who solves business problems with technology. How you position yourself matters as much as your technical skills.
+
+## Discovering Career with Your AI Partner
+
+### Exploration 1: Portfolio Strategy
+
+```
+Ask your AI:
+What should a junior web developer's portfolio demonstrate? Quality vs quantity?
+```
+
+### Exploration 2: Professional Communication
+
+```
+Ask your AI:
+How do you explain technical decisions to non-technical stakeholders? Give examples.
+```
+
+### Exploration 3: Learning Path
+
+```
+Ask your AI:
+I know HTML, CSS, JavaScript, WordPress, and React. What should I learn next? How do I decide?
+```
+
+## From Concept to Code
+
+[To be developed: Portfolio development, GitHub profile, LinkedIn, networking, interview prep]
+
+## Business Applications
+
+*This develops ULO 2 – communicating effectively with stakeholders.*
+
+- **Career progression**: From junior to senior roles
+- **Freelance/consulting**: Building a client base
+- **Internal advocacy**: Getting technical projects approved
+- **Leadership**: Moving into management
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Portfolio demonstrates capability
+- Communication multiplies technical value
+- Networking opens opportunities
+- Continuous learning is expected
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 14, we'll reflect on what it means to be a developer in the AI era – what won't change, what's evolving, and how to thrive in partnership with AI.

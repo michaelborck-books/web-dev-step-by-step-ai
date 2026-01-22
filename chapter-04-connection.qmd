@@ -1,0 +1,67 @@
+# Connection: APIs as Business Integration {#sec-connection}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+No system exists in isolation. APIs (Application Programming Interfaces) allow different systems to communicate – your website can display weather data, process payments, or sync with inventory systems.
+
+## Understanding Through Contracts
+
+An API is like a contract between systems. It says: "If you send me this, I'll give you that." Both sides agree on the format, and communication flows.
+
+## Discovering Connection with Your AI Partner
+
+### Exploration 1: API Analogy
+
+```
+Ask your AI:
+Explain REST APIs using a restaurant ordering system analogy
+```
+
+### Exploration 2: Data Formats
+
+```
+Ask your AI:
+Why is JSON the standard format for API data? What problem does it solve?
+```
+
+### Exploration 3: Error Handling
+
+```
+Ask your AI:
+What can go wrong when calling an API? How should a professional application handle each case?
+```
+
+## From Concept to Code
+
+[To be developed: fetch(), JSON, async/await, error handling, CORS basics]
+
+## Business Applications
+
+- **Data integration**: Connect to business systems
+- **Third-party services**: Payments, maps, analytics
+- **Real-time updates**: Live data without refresh
+- **Scalability**: Separate frontend from backend
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- APIs enable system integration
+- HTTP methods have specific purposes
+- Error handling is professional practice
+- JSON is the common language
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+You've now covered the foundations: HTML (structure), CSS (presentation), JavaScript (behaviour), and APIs (connection). In the Portfolio Project, you'll combine these skills to build a complete portfolio website. Then we move to Part II, where we explore content management systems.

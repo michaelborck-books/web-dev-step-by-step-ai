@@ -1,0 +1,98 @@
+# Structure: HTML as Information Architecture {#sec-structure}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+Before we write any HTML, let's understand what we're really doing: **organising information so both humans and machines can understand it**.
+
+A web page is a document. Like any document – a book, a report, a menu – it has structure. HTML is simply the language we use to describe that structure.
+
+## Understanding Through Architecture
+
+Think of a building:
+
+- The **foundation** supports everything
+- **Walls** divide space into meaningful areas
+- **Signs** tell you what each area is for
+- **Doors** connect different spaces
+
+HTML works the same way. Elements create structure. Tags label what things are.
+
+## Discovering Structure with Your AI Partner
+
+### Exploration 1: Document Anatomy
+
+```
+Ask your AI:
+If I showed you a restaurant menu, what structural elements would you identify? Don't use any HTML terms yet.
+```
+
+### Exploration 2: Semantic Meaning
+
+```
+Ask your AI:
+Explain "semantic HTML" using a library catalog analogy
+```
+
+### Exploration 3: Simplest Page
+
+```
+Ask your AI:
+Show me the absolute simplest valid HTML page with just a heading and paragraph
+```
+
+## From Concept to Code
+
+[To be developed: Basic HTML structure, semantic elements]
+
+## Business Applications
+
+Why structure matters for business:
+
+- **SEO**: Search engines understand structured content
+- **Accessibility**: Screen readers navigate structure
+- **Maintenance**: Well-structured pages are easier to update
+- **Professionalism**: Structure reflects organisational thinking
+
+## Practice Exercises
+
+### Exercise 1.1 (Level 1)
+[To be developed]
+
+### Exercise 1.2 (Level 2)
+[To be developed]
+
+### Exercise 1.3 (Level 3)
+[To be developed]
+
+### Exercise 1.4 (Level 4)
+[To be developed]
+
+### Exercise 1.5 (Level 5)
+[To be developed]
+
+## Chapter Summary
+
+- HTML describes document structure
+- Semantic elements convey meaning
+- Structure serves both humans and machines
+- Good structure is a business asset
+
+## Reflection
+
+- [ ] Can explain HTML's purpose without using technical jargon
+- [ ] Understand semantic vs. presentational markup
+- [ ] Can identify structural elements in any document
+- [ ] See how structure serves business goals
+
+## Your Learning Journal
+
+[Prompts to be developed]
+
+## Next Steps
+
+In Chapter 2, we'll explore CSS – how to control the visual presentation of our structured content. Structure and presentation are deliberately separate, and understanding why is key to professional web development.

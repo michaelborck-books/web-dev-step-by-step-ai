@@ -1,0 +1,69 @@
+# Component Thinking: React {#sec-component-thinking}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+React introduces **component thinking** – building interfaces from reusable, self-contained pieces. This isn't just a technology choice; it's a different way of thinking about user interfaces.
+
+## Understanding Through LEGO
+
+Think of LEGO bricks. Each brick is self-contained. Complex structures emerge from combining simple pieces. React components work the same way.
+
+A page isn't a monolith – it's a composition of components.
+
+## Discovering Components with Your AI Partner
+
+### Exploration 1: Decomposition
+
+```
+Ask your AI:
+Look at a typical e-commerce product page. How would you break it into components? Draw a diagram.
+```
+
+### Exploration 2: State Thinking
+
+```
+Ask your AI:
+Explain React state using a light switch analogy. Then a shopping cart analogy.
+```
+
+### Exploration 3: Props Flow
+
+```
+Ask your AI:
+Explain how data flows through React components using a family tree analogy
+```
+
+## From Concept to Code
+
+[To be developed: JSX, components, props, state, hooks, fetching data]
+
+## Business Applications
+
+- **Reusability**: Build once, use everywhere
+- **Maintainability**: Change one component, update everywhere
+- **Team collaboration**: Different developers own different components
+- **Testing**: Test components in isolation
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Components are reusable UI building blocks
+- State represents what can change
+- Props pass data between components
+- Component thinking is a transferable skill
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 10, we'll explore CSS frameworks like Bootstrap and Tailwind – tools that accelerate development by providing pre-built components and utility classes. Combined with React, these enable rapid professional development.

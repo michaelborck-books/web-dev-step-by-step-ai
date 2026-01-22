@@ -1,0 +1,74 @@
+# Extending Platforms {#sec-extending-platforms}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+Platforms become powerful through extensions. WordPress plugins add functionality without changing core code. But **when do you use an existing plugin vs build custom?** This is a critical business decision.
+
+## Understanding Through Build vs Buy
+
+Every extension decision weighs:
+
+- **Time**: How long to build vs install?
+- **Cost**: Development vs licensing?
+- **Maintenance**: Who updates it?
+- **Fit**: Does it solve 80% or 100% of the need?
+
+## Discovering Extensions with Your AI Partner
+
+### Exploration 1: Plugin Evaluation
+
+```
+Ask your AI:
+I need a contact form for WordPress. Create a framework for evaluating the top 3 options.
+```
+
+### Exploration 2: Build vs Buy
+
+```
+Ask your AI:
+A client needs a booking system. Walk me through the decision process for using a plugin vs building custom.
+```
+
+### Exploration 3: Technical Debt
+
+```
+Ask your AI:
+What is "plugin bloat"? How do too many plugins create technical debt?
+```
+
+## From Concept to Code
+
+[To be developed: Plugin installation, evaluation, basic customisation, child themes, functions.php]
+
+## Business Applications
+
+*This develops ULO 4 – making and defending technology choices.*
+
+- **ROI calculation**: Development cost vs plugin cost
+- **Risk assessment**: Plugin abandonment, security
+- **Client communication**: Explaining trade-offs
+- **Long-term thinking**: Maintenance burden
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Extensions multiply platform value
+- Build vs buy is a business decision
+- Evaluation frameworks reduce risk
+- Technical debt accumulates silently
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 8, we'll explore headless architecture – using WordPress as a content backend while building custom frontends. This bridges your CMS knowledge with modern frontend development.

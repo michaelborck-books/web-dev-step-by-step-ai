@@ -1,0 +1,57 @@
+# Project: React Integration {#sec-project-react-integration}
+
+::: {.callout-note}
+## Project Status: Stub
+This project needs full specification development.
+:::
+
+## Project Overview
+
+Build a React frontend that consumes content from your WordPress site via the REST API, demonstrating headless architecture and modern frontend development.
+
+**Aligned with**: Assessment 2 Part B in ISYS3004
+
+## Learning Outcomes Addressed
+
+- **ULO 1**: Design and implement effective web applications
+- **ULO 4**: Select and integrate technologies
+- **ULO 5**: Evaluate emerging technologies
+
+## Requirements
+
+### Functional Requirements
+
+- Display WordPress posts in React
+- Post list and detail views
+- Loading and error states
+- Responsive design
+- Navigation between views
+
+### Technical Requirements
+
+- React (create-react-app or Vite)
+- WordPress REST API integration
+- CSS framework (Bootstrap or Tailwind)
+- Error handling
+- Component architecture
+
+## AI Collaboration Guidelines
+
+Document your React journey:
+
+1. How did AI help you understand React concepts?
+2. What components did you create vs generate?
+3. How did you debug issues?
+4. What patterns did you learn?
+
+## Evaluation Criteria
+
+[To be developed: Rubric]
+
+## Submission
+
+- React source code (not node_modules)
+- Documentation
+- Screenshots/demo
+- AI collaboration log
+- Reflection on headless architecture

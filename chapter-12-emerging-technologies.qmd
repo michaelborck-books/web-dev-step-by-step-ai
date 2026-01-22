@@ -1,0 +1,73 @@
+# Evaluating Emerging Technologies {#sec-emerging-technologies}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+## The Concept First
+
+Technology changes constantly. The valuable skill isn't knowing today's tools – it's **systematically evaluating new technologies** to make informed recommendations. This chapter teaches you how to assess any technology, not just current ones.
+
+## Understanding Through Frameworks
+
+Don't ask "Is X good?" Ask:
+
+- What problem does it solve?
+- What trade-offs does it make?
+- Who is using it successfully?
+- What's the total cost of adoption?
+
+## Discovering Evaluation with Your AI Partner
+
+### Exploration 1: Evaluation Framework
+
+```
+Ask your AI:
+Create a framework for evaluating whether a business should adopt a new web technology
+```
+
+### Exploration 2: Hype vs Reality
+
+```
+Ask your AI:
+How do you distinguish technology hype from genuine value? Give examples from web development history.
+```
+
+### Exploration 3: Current Landscape
+
+```
+Ask your AI:
+What web technologies are gaining adoption in 2025? For each, what problem does it solve?
+```
+
+## From Concept to Code
+
+[To be developed: PWAs, TypeScript, SSR, evaluation case studies]
+
+## Business Applications
+
+*This develops ULO 5 – assessing emerging technologies through systematic evaluation.*
+
+- **Strategic planning**: Informed technology roadmaps
+- **Risk management**: Understanding adoption risks
+- **Client advisory**: Recommending appropriate solutions
+- **Career development**: Knowing what to learn next
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Evaluation frameworks outlast specific technologies
+- Trade-offs matter more than features
+- Adoption context determines suitability
+- Uncertainty is normal – acknowledge it
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 13, we'll focus on your development career – building a portfolio, positioning yourself professionally, and planning continuous growth.

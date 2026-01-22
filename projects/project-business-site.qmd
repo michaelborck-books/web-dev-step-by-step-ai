@@ -1,0 +1,66 @@
+# Project: Business Website with WordPress {#sec-project-business-site}
+
+::: {.callout-note}
+## Project Status: Stub
+This project needs full specification development.
+:::
+
+## Project Overview
+
+Build a complete WordPress website for a fictional (or real) business, demonstrating CMS configuration, theme customisation, and plugin integration.
+
+**Aligned with**: Assessment 2 Part A in ISYS3004
+
+## Learning Outcomes Addressed
+
+- **ULO 2**: Demonstrate project management and professional skills
+- **ULO 3**: Analyse stakeholder requirements
+- **ULO 4**: Select and integrate technologies
+
+## Business Scenario
+
+Choose or create a business scenario:
+
+- Local café or restaurant
+- Professional services firm
+- Retail shop
+- Non-profit organisation
+- Your own venture
+
+## Requirements
+
+### Business Requirements
+
+- Clear business case documentation
+- Stakeholder analysis
+- Content strategy
+- Site map
+
+### Technical Requirements
+
+- WordPress installation (LocalWP)
+- Theme selection and customisation
+- Essential plugins (contact form, SEO, security)
+- Custom functionality (child theme)
+- REST API endpoints exposed
+
+## AI Collaboration Guidelines
+
+Document your technology decisions:
+
+1. Why did you choose this theme?
+2. What plugins did you evaluate?
+3. How did AI help with customisation?
+4. What would you recommend to the "client"?
+
+## Evaluation Criteria
+
+[To be developed: Rubric]
+
+## Submission
+
+- WordPress export
+- Child theme files
+- Technical documentation
+- Business case document
+- AI collaboration log

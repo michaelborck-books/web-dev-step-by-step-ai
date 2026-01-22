@@ -1,0 +1,92 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Web Development Step by Step"
+  subtitle: "Building Business Solutions with AI"
+  author: "Michael Borck"
+  date: today
+  description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
+  # cover-image: cover.png
+  site-url: https://michael-borck.github.io/web-dev-step-by-step-ai
+  repo-url: https://github.com/michael-borck/web-dev-step-by-step-ai
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  chapters:
+    - index.qmd
+    - acknowledgments.qmd
+
+    - part: "Part 0: Your AI Development Partnership"
+      chapters:
+        - chapter-00-ai-web-partner.qmd
+
+    - part: "Part I: Web Foundations"
+      chapters:
+        - chapter-01-structure.qmd
+        - chapter-02-presentation.qmd
+        - chapter-03-behaviour.qmd
+        - chapter-04-connection.qmd
+        - projects/project-portfolio.qmd
+
+    - part: "Part II: Content Management for Business"
+      chapters:
+        - chapter-05-why-cms.qmd
+        - chapter-06-wordpress-platform.qmd
+        - chapter-07-extending-platforms.qmd
+        - chapter-08-headless-architecture.qmd
+        - projects/project-business-site.qmd
+
+    - part: "Part III: Modern Frontend Development"
+      chapters:
+        - chapter-09-component-thinking.qmd
+        - chapter-10-rapid-development.qmd
+        - chapter-11-professional-practices.qmd
+        - projects/project-react-integration.qmd
+
+    - part: "Part IV: The Professional Developer"
+      chapters:
+        - chapter-12-emerging-technologies.qmd
+        - chapter-13-development-career.qmd
+        - chapter-14-ai-era-developer.qmd
+
+    - references.qmd
+
+  page-navigation: true
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 2
+    tools:
+      - icon: github
+        href: https://github.com/michael-borck/web-dev-step-by-step-ai
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: assets/custom.css
+    code-fold: false
+    code-tools: true
+    code-copy: hover
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    number-sections: true
+    number-depth: 2
+    highlight-style: github
+
+crossref:
+  chapters: true
+  fig-title: "Figure"
+  tbl-title: "Table"
+
+execute:
+  echo: true
+  warning: false
+  error: false

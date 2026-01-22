@@ -1,0 +1,67 @@
+# Behaviour: JavaScript as User Interaction {#sec-behaviour}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+HTML provides structure. CSS provides presentation. JavaScript provides **behaviour** – the ability to respond to user actions, update content dynamically, and create interactive experiences.
+
+## Understanding Through Conversation
+
+A static page is like a poster. JavaScript makes your page more like a conversation – it listens, responds, and adapts.
+
+## Discovering Behaviour with Your AI Partner
+
+### Exploration 1: Event-Driven Thinking
+
+```
+Ask your AI:
+Explain event-driven programming using a restaurant service analogy
+```
+
+### Exploration 2: DOM Manipulation
+
+```
+Ask your AI:
+What is the DOM? Explain it as if describing how a librarian rearranges books.
+```
+
+### Exploration 3: Progressive Enhancement
+
+```
+Ask your AI:
+Why should websites work without JavaScript? Explain the business case.
+```
+
+## From Concept to Code
+
+[To be developed: Variables, functions, events, DOM manipulation, async basics]
+
+## Business Applications
+
+- **User engagement**: Interactive features increase engagement
+- **Form validation**: Prevent errors before submission
+- **Dynamic content**: Update without page reload
+- **Analytics**: Track user behaviour
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- JavaScript enables interaction
+- Event-driven thinking is fundamental
+- Progressive enhancement ensures accessibility
+- Behaviour enhances but shouldn't replace structure
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 4, we'll connect to the world through APIs – fetching data from other services and sending data to servers. This transforms standalone pages into connected applications.

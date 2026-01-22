@@ -1,0 +1,73 @@
+# Preface {.unnumbered}
+
+## Building for Business in the AI Era
+
+Welcome to *Web Development Step by Step: Building Business Solutions with AI* – a practical guide to modern web development that embraces AI as your development partner while never losing sight of why we build: to solve real business problems.
+
+### Why This Book Is Different
+
+Most web development books teach you technologies. This book teaches you to **think like a professional developer** who happens to use specific technologies.
+
+In a world where AI can generate code in seconds, the valuable skills are:
+
+- **Understanding what to build** – translating business needs into technical requirements
+- **Evaluating technology choices** – knowing when WordPress beats React, or vice versa
+- **Communicating with stakeholders** – explaining technical decisions in business terms
+- **Iteratively improving** – knowing when "good enough" ships and when quality matters
+
+This book develops these skills while teaching you HTML, CSS, JavaScript, WordPress, and React.
+
+### The AI Partnership
+
+AI can write HTML, CSS, and JavaScript faster than you ever will. That's not a threat – it's a superpower.
+
+This book teaches you to:
+
+- **Architect solutions** that AI helps you build
+- **Evaluate AI output** with professional judgment
+- **Communicate requirements** clearly enough for AI to help
+- **Debug and improve** AI-generated code
+
+You're learning to be the architect. AI is your highly skilled assistant.
+
+### About This Book's Creation
+
+In the spirit of practicing what we teach, this book was created through human-AI collaboration. Every chapter represents a partnership between human expertise and AI assistance, with careful human oversight ensuring pedagogical quality and technical accuracy.
+
+### Your Learning Journey
+
+Over 12 weeks (or at your own pace), you'll progress from understanding web fundamentals to building integrated business applications. More importantly, you'll develop the professional judgment that makes you valuable in any technology stack.
+
+### Who This Book Is For
+
+- **Students** in business technology or web development courses
+- **Career changers** entering tech from business backgrounds
+- **Professionals** who need to understand web development for their roles
+- **Anyone** who wants to build web solutions with AI assistance
+
+### Prerequisites
+
+- Basic computer literacy
+- Curiosity about how websites work
+- Willingness to experiment and learn from mistakes
+- Access to AI tools (ChatGPT, Claude, or similar)
+
+No prior programming experience required. We start from scratch.
+
+### How to Use This Book
+
+Each chapter follows a consistent pattern:
+
+1. **Concept First** – Understand the idea before the syntax
+2. **AI Exploration** – Discover patterns with AI assistance
+3. **Hands-On Practice** – Build something real
+4. **Business Connection** – Understand why this matters
+5. **Reflection** – Consolidate your learning
+
+Work through chapters in order. Each builds on the previous.
+
+### Companion Course
+
+This book aligns with ISYS3004: Business Web and Mobile Technologies at Curtin University, but stands alone as a complete learning resource.
+
+Let's build something meaningful together.

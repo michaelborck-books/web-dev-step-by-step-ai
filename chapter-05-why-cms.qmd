@@ -1,0 +1,73 @@
+# Why CMS? The Business Value of Managed Content {#sec-why-cms}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+In Part I, you built pages by writing code. But who updates that content? A CMS (Content Management System) separates content from code, allowing non-technical users to manage their own websites.
+
+This is a **business decision**, not just a technical one.
+
+## Understanding Through Roles
+
+Think about a newspaper. Writers create content. Editors review it. Designers create templates. Each role focuses on what they do best.
+
+A CMS enables this separation for websites.
+
+## Discovering CMS with Your AI Partner
+
+### Exploration 1: Build vs Buy
+
+```
+Ask your AI:
+When should a business build a custom website vs use a CMS? Create a decision framework.
+```
+
+### Exploration 2: Stakeholder Analysis
+
+```
+Ask your AI:
+Who are the stakeholders in a website project? What does each need from a CMS?
+```
+
+### Exploration 3: Content Strategy
+
+```
+Ask your AI:
+Explain content strategy for a small business website. What questions should we answer first?
+```
+
+## From Concept to Code
+
+[To be developed: CMS types, WordPress overview, content modelling]
+
+## Business Applications
+
+*This develops ULO 3 – translating stakeholder needs into requirements.*
+
+- **Client handoff**: Clients can update their own content
+- **Reduced maintenance**: Content changes don't require developers
+- **Governance**: Control who can change what
+- **Scalability**: Add content without code changes
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- CMS separates content from code
+- Stakeholder needs drive CMS choice
+- Content strategy precedes technology
+- The right CMS reduces long-term costs
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 6, we'll dive into WordPress – the CMS powering over 40% of the web. We'll understand it as a platform, not just a blogging tool.

@@ -1,0 +1,69 @@
+# Headless Architecture {#sec-headless-architecture}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+Traditional WordPress handles both content management AND presentation. **Headless** architecture separates these: WordPress manages content, but a separate frontend (React, for example) handles display.
+
+This enables the best of both worlds.
+
+## Understanding Through Separation
+
+Imagine a restaurant where the kitchen (content) and dining room (presentation) are in different buildings. Orders (API requests) travel between them. Each can be optimised independently.
+
+## Discovering Headless with Your AI Partner
+
+### Exploration 1: Architecture Trade-offs
+
+```
+Ask your AI:
+Compare traditional WordPress vs headless WordPress. When would you choose each?
+```
+
+### Exploration 2: API Contracts
+
+```
+Ask your AI:
+Explain how the WordPress REST API works as a "contract" between backend and frontend
+```
+
+### Exploration 3: Business Cases
+
+```
+Ask your AI:
+Give me 3 real-world scenarios where headless WordPress makes business sense
+```
+
+## From Concept to Code
+
+[To be developed: WordPress REST API, endpoints, authentication, fetching data]
+
+## Business Applications
+
+- **Multi-channel**: Same content to web, mobile, displays
+- **Performance**: Static frontends are faster
+- **Security**: Reduced attack surface
+- **Developer experience**: Modern frontend tools
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Headless separates content from presentation
+- REST APIs enable this separation
+- Architecture choices have business implications
+- The right architecture depends on requirements
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+You've now mastered content management. In the Business Site Project, you'll build a complete WordPress site with custom functionality. Then we move to Part III, where we'll build a modern React frontend that consumes WordPress content.

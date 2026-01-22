@@ -1,0 +1,69 @@
+# Presentation: CSS as Visual Communication {#sec-presentation}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+CSS controls how structured content looks. But it's more than decoration – it's **visual communication**. Colours, spacing, and layout convey meaning, guide attention, and build trust.
+
+## Understanding Through Design
+
+Think of two cafés with identical menus but different interiors. The food is the same (content), but the atmosphere (presentation) creates completely different experiences.
+
+CSS is your atmosphere.
+
+## Discovering Presentation with Your AI Partner
+
+### Exploration 1: Separation of Concerns
+
+```
+Ask your AI:
+Why do we separate HTML (structure) from CSS (presentation)? Explain using a newspaper analogy.
+```
+
+### Exploration 2: Mobile-First
+
+```
+Ask your AI:
+Explain mobile-first design as a business strategy, not just a technical approach
+```
+
+### Exploration 3: Visual Hierarchy
+
+```
+Ask your AI:
+How does visual hierarchy guide user attention? Show me with a simple example.
+```
+
+## From Concept to Code
+
+[To be developed: CSS basics, selectors, box model, flexbox, responsive design]
+
+## Business Applications
+
+- **Brand consistency**: CSS enforces visual standards
+- **User experience**: Good design builds trust
+- **Mobile reach**: Responsive design serves all devices
+- **Conversion**: Visual hierarchy guides users to action
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- CSS controls visual presentation
+- Mobile-first is a business strategy
+- Visual hierarchy guides user attention
+- Presentation and structure serve different purposes
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 3, we'll add behaviour with JavaScript – making pages respond to user actions. Structure, presentation, and behaviour form the three pillars of web development.

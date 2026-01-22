@@ -1,0 +1,69 @@
+# Rapid Development: CSS Frameworks {#sec-rapid-development}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+CSS frameworks (Bootstrap, Tailwind, etc.) provide pre-built styles and components. They're **constraints that enable speed**. Instead of designing every button, you use consistent, tested patterns.
+
+## Understanding Through Design Systems
+
+Professional design teams use design systems – documented patterns for consistency. CSS frameworks are design systems you can adopt immediately.
+
+## Discovering Frameworks with Your AI Partner
+
+### Exploration 1: Framework Comparison
+
+```
+Ask your AI:
+Compare Bootstrap and Tailwind CSS. When would you choose each?
+```
+
+### Exploration 2: Constraints as Features
+
+```
+Ask your AI:
+How do constraints help creativity? Apply this to CSS frameworks.
+```
+
+### Exploration 3: Customisation
+
+```
+Ask your AI:
+A client says their Bootstrap site "looks like every other site." How do you respond?
+```
+
+## From Concept to Code
+
+[To be developed: Bootstrap/Tailwind basics, responsive utilities, component libraries, customisation]
+
+## Business Applications
+
+*This develops ULO 4 – making and defending technology choices.*
+
+- **Speed**: Faster development time
+- **Consistency**: Uniform look and feel
+- **Responsiveness**: Built-in mobile support
+- **Maintenance**: Updates from community
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Frameworks trade flexibility for speed
+- Design systems enable consistency
+- Framework choice depends on project needs
+- Customisation prevents generic appearance
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 11, we'll cover professional practices – testing, version control, and code quality. These practices separate hobbyist projects from professional work.

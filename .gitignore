@@ -1,0 +1,41 @@
+# Quarto
+/.quarto/
+/_book/
+/_freeze/
+*_files/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if using any JS tools)
+node_modules/
+
+# Python (if using any Python tools)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Build artifacts
+*.log
+*.aux
+*.out
+*.toc
+
+# Draft/temp files
+*.draft.qmd
+*.tmp
+notes/*.md
+!notes/.gitkeep

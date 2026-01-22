@@ -1,0 +1,69 @@
+# Professional Practices {#sec-professional-practices}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+Writing code that works is one thing. Writing code that **works reliably, can be maintained, and collaborates well** is professional practice. This chapter covers the practices that distinguish professional developers.
+
+## Understanding Through Craftsmanship
+
+A carpenter's table might function whether it's measured once or twice. But professional carpenters measure twice because they've learned the cost of mistakes. Professional practices are your "measure twice."
+
+## Discovering Professionalism with Your AI Partner
+
+### Exploration 1: Version Control
+
+```
+Ask your AI:
+Explain Git to someone who has never used version control. Why should they care?
+```
+
+### Exploration 2: Testing Philosophy
+
+```
+Ask your AI:
+Why do professional developers write tests? What's the business case?
+```
+
+### Exploration 3: Code Quality
+
+```
+Ask your AI:
+What makes code "good"? Create a checklist for reviewing your own code.
+```
+
+## From Concept to Code
+
+[To be developed: Git workflow, testing basics, code review, documentation]
+
+## Business Applications
+
+*This develops ULO 2 – demonstrating professional project management practices.*
+
+- **Risk reduction**: Version control prevents disasters
+- **Quality assurance**: Testing catches bugs early
+- **Collaboration**: Good practices enable teamwork
+- **Maintainability**: Future you will thank present you
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- Version control is non-negotiable
+- Testing is a professional investment
+- Code quality serves future maintainers
+- Professional practices reduce risk
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+You've now covered modern frontend development. In the React Integration Project, you'll build a React frontend that consumes WordPress content. Then we move to Part IV, where we look ahead to emerging technologies and your development career.

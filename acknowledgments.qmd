@@ -1,0 +1,32 @@
+# Acknowledgments {.unnumbered}
+
+This book exists because of many people who believe that learning to build for the web should be accessible, practical, and connected to real-world purpose.
+
+## Students
+
+To the students of ISYS3004 at Curtin University who tested these ideas, asked hard questions, and showed me what actually helps people learn – thank you for your patience and feedback.
+
+## Colleagues
+
+[To be added]
+
+## AI Collaboration
+
+This book was developed in partnership with AI assistants, demonstrating the very collaboration it teaches. The ideas, pedagogy, and judgment are human; the drafting and iteration benefited from AI assistance.
+
+## Open Source Community
+
+The web development community's commitment to sharing knowledge freely makes resources like this possible. Special thanks to the maintainers of:
+
+- MDN Web Docs
+- WordPress.org documentation
+- React documentation
+- Quarto publishing system
+
+## Family
+
+[To be added]
+
+---
+
+*This book is dedicated to everyone who has ever thought "I'm not technical enough" – you are.*

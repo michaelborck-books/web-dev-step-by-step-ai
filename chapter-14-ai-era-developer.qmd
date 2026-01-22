@@ -1,0 +1,90 @@
+# The AI-Era Developer {#sec-ai-era-developer}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+AI is transforming development. But **some things won't change**: understanding problems, communicating with stakeholders, making trade-offs, and exercising judgment. This chapter explores what it means to be a developer when AI can write code.
+
+## Understanding Through Partnership
+
+We started this book by establishing AI as your partner. Now let's reflect: What did you learn that AI couldn't learn for you? What can you do that AI can't?
+
+## Discovering the Future with Your AI Partner
+
+### Exploration 1: What Won't Change
+
+```
+Ask your AI:
+What aspects of software development won't be automated by AI? Why?
+```
+
+### Exploration 2: Your Unique Value
+
+```
+Ask your AI:
+What can a human developer do that AI cannot? Be specific.
+```
+
+### Exploration 3: Future Partnership
+
+```
+Ask your AI:
+How might human-AI collaboration in development evolve over the next 5 years?
+```
+
+## From Concept to Code
+
+[To be developed: AI collaboration patterns, prompt engineering, quality control, ethical considerations]
+
+## Business Applications
+
+- **Productivity**: Leveraging AI effectively
+- **Quality control**: Reviewing AI output critically
+- **Innovation**: Using AI for exploration
+- **Leadership**: Guiding AI-assisted teams
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- AI amplifies, doesn't replace, human judgment
+- Understanding problems remains essential
+- Communication skills gain value
+- Continuous adaptation is the new normal
+
+## Reflection
+
+Looking back on your journey:
+
+- [ ] Can you articulate what you learned that AI couldn't learn for you?
+- [ ] Do you understand your unique value as a developer?
+- [ ] Have you developed judgment about when to use AI and when not to?
+- [ ] Are you ready to continue learning independently?
+
+## Your Final Learning Journal Entry
+
+Record your thoughts on:
+
+1. **Your journey**: What surprised you most about learning web development?
+2. **AI partnership**: How did your relationship with AI tools evolve?
+3. **Business thinking**: How do you now think about technology decisions?
+4. **Future goals**: Where will you go from here?
+
+## Looking Forward
+
+This book ends, but your learning continues. You now have:
+
+- **Technical foundations** in web development
+- **Business thinking** about technology decisions
+- **AI collaboration** skills for the modern era
+- **Professional practices** for quality work
+
+Use these foundations. Build things. Break things. Learn from mistakes. Partner with AI. Create value.
+
+Welcome to your career as a web professional.

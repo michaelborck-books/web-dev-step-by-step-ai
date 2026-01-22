@@ -1,0 +1,69 @@
+# WordPress as Platform {#sec-wordpress-platform}
+
+::: {.callout-note}
+## Chapter Status: Stub
+This chapter needs full content development.
+:::
+
+## The Concept First
+
+WordPress isn't just blogging software – it's a **platform** with an ecosystem of themes, plugins, and APIs. Understanding WordPress as a platform helps you make better technology decisions.
+
+## Understanding Through Ecosystems
+
+Think of WordPress like a smartphone. The core provides basics, but the app ecosystem makes it powerful. Choosing the right "apps" (plugins/themes) is as important as the platform itself.
+
+## Discovering WordPress with Your AI Partner
+
+### Exploration 1: Platform Thinking
+
+```
+Ask your AI:
+What makes something a "platform" vs just "software"? Use WordPress and Excel as examples.
+```
+
+### Exploration 2: Ecosystem Evaluation
+
+```
+Ask your AI:
+How do you evaluate whether a WordPress theme or plugin is trustworthy? What red flags should you watch for?
+```
+
+### Exploration 3: Architecture
+
+```
+Ask your AI:
+Explain WordPress's architecture (database, themes, plugins) using a restaurant analogy
+```
+
+## From Concept to Code
+
+[To be developed: WordPress installation, admin interface, themes, basic customisation]
+
+## Business Applications
+
+*This develops ULO 4 – making and defending technology choices.*
+
+- **Market share**: WordPress skills are in demand
+- **Cost**: Open source reduces licensing costs
+- **Flexibility**: Thousands of plugins for specific needs
+- **Community**: Large support ecosystem
+
+## Practice Exercises
+
+[Exercises to be developed]
+
+## Chapter Summary
+
+- WordPress is a platform, not just software
+- Ecosystem evaluation is a critical skill
+- Architecture understanding aids troubleshooting
+- Platform choice is a business decision
+
+## Reflection
+
+[Checklist to be developed]
+
+## Next Steps
+
+In Chapter 7, we'll explore how to extend WordPress through plugins – both using existing ones and understanding how they work. This builds toward customising WordPress for specific business needs.

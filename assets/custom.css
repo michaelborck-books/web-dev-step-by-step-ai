@@ -1,0 +1,63 @@
+/* Custom styles for Web Development Step by Step */
+
+/* Exercise containers */
+.exercise-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: #fafafa;
+}
+
+.exercise-level-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.level-1-badge { background: #e3f2fd; color: #1565c0; }
+.level-2-badge { background: #e8f5e9; color: #2e7d32; }
+.level-3-badge { background: #fff3e0; color: #ef6c00; }
+.level-4-badge { background: #fce4ec; color: #c2185b; }
+.level-5-badge { background: #f3e5f5; color: #7b1fa2; }
+
+/* Code blocks */
+pre {
+  border-radius: 6px;
+}
+
+/* AI prompt styling */
+.ai-prompt {
+  background: #f5f5f5;
+  border-left: 4px solid #6366f1;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: monospace;
+}
+
+/* Chapter summary */
+.chapter-summary {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Reflection checklist */
+.reflection {
+  background: #fff8e1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Journal prompt */
+.journal {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
