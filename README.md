@@ -32,6 +32,9 @@ quarto render
 
 # Build PDF (requires LaTeX)
 quarto render --to pdf
+
+# Publish to GitHub Pages (manual, no GitHub Actions)
+quarto publish gh-pages
 ```
 
 ## Course Alignment

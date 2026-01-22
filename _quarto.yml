@@ -9,8 +9,8 @@ book:
   date: today
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
   # cover-image: cover.png
-  site-url: https://michael-borck.github.io/web-dev-step-by-step-ai
-  repo-url: https://github.com/michael-borck/web-dev-step-by-step-ai
+  site-url: https://michaelborck-books.github.io/web-dev-step-by-ste-ai
+  repo-url: https://github.com/michaelborck-books/web-dev-step-by-ste-ai
   repo-branch: main
   repo-actions: [edit, issue]
 
@@ -61,7 +61,7 @@ book:
     collapse-level: 2
     tools:
       - icon: github
-        href: https://github.com/michael-borck/web-dev-step-by-step-ai
+        href: https://github.com/michaelborck-books/web-dev-step-by-ste-ai
 
 bibliography: references.bib
 
