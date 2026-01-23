@@ -1,1 +1,1 @@
-Sitemap: https://michaelborck-books.github.io/web-dev-step-by-ste-ai/sitemap.xml
+Sitemap: https://michaelborck-books.github.io/build-web-guide-ai/sitemap.xml
