@@ -8,9 +8,9 @@ book:
   author: "Michael Borck"
   date: today
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
-  # cover-image: cover.png
-  site-url: https://michaelborck-books.github.io/build-web-guide-ai
-  repo-url: https://github.com/michaelborck-books/build-web-guide-ai
+  cover-image: cover.png
+  site-url: https://michael-borck.github.io/build-web-guide-ai
+  repo-url: https://github.com/michael-borck/build-web-guide-ai
   repo-branch: main
   repo-actions: [edit, issue]
 
@@ -61,7 +61,7 @@ book:
     collapse-level: 2
     tools:
       - icon: github
-        href: https://github.com/michaelborck-books/build-web-guide-ai
+        href: https://github.com/michael-borck/build-web-guide-ai
 
 bibliography: references.bib
 
